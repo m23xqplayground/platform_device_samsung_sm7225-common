@@ -7,6 +7,7 @@ enum device_variant {
     VARIANT_A426B = 0,
     VARIANT_A426N,
     VARIANT_A426U,
+    VARIANT_M236B,
     VARIANT_M426B,
     VARIANT_MAX
 };
@@ -19,6 +20,11 @@ typedef struct {
 static const variant international_models = {
     .model = "SM-A426B",
     .codename = "a42xq"
+};
+
+static const variant international_models_m23 = {
+    .model = "SM-M236B",
+    .codename = "m23xq"
 };
 
 static const variant kor_models = {
@@ -38,6 +44,7 @@ static const variant indea_m_models = {
 
 static const variant *all_variants[VARIANT_MAX] = {
     &international_models,
+    &international_models_m23,
     &kor_models,
     &america_models,
     &indea_m_models,
