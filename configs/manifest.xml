@@ -505,6 +505,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.drm</name>
+        <transport>hwbinder</transport>
         <version>1.4</version>
         <interface>
             <name>ICryptoFactory</name>
