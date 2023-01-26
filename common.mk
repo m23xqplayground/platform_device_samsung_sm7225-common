@@ -429,6 +429,10 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# Fix ADB
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.control_privapp_permissions=log
+
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
     $(COMMON_PATH)/configs/wifi/indoorchannel.info:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/indoorchannel.info \
