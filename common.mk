@@ -67,20 +67,23 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@6.0-impl:32 \
-    android.hardware.audio.effect@6.0-impl:32 \
-    android.hardware.soundtrigger@2.2-impl \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio@4.0-impl \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    audioadsprpcd \
+    audio.primary.default \
+    audio.primary.lito \
     audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
     libaudioalsa \
     libtinycompress \
+    sound_trigger.primary.lito \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
-    libvolumelistener
+    libvolumelistener \
+    SamsungDAP
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/audio/audio_configs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_configs.xml \
