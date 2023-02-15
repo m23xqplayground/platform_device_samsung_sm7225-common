@@ -364,7 +364,7 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson.vendor
+    libjson
 
 # Radio
 PRODUCT_PACKAGES += \
