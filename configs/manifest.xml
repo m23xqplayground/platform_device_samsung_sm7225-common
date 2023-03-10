@@ -29,6 +29,7 @@
     </hal>
     <hal format="hidl" optional="true">
     <name>android.hardware.power.stats</name>
+    <transport>hwbinder</transport>
     <version>1.0</version>
     <interface>
         <name>IPowerStats</name>
