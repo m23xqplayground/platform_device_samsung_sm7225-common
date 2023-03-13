@@ -1,10 +1,10 @@
 Copyright 2023 - The LineageOS Project
 # Device configuration for Samsung Galaxy M23/F23 (M236B/E236B) Devices
-The Samsung Galaxy M23 5G (codename m23xq) is a upper mid-range smartphone from Samsung
+The Samsung Galaxy M23 5G (codename m23xq) is an upper mid-range smartphone from Samsung.
 
 It was announced in March 2022 and released in April 2022.
 
-There are also two different variants for International (SM-M236B) and India (SM-E236B).
+There are also two different variants: International M23 (SM-M236B) and India F23 (SM-E236B).
 
 ## Device specifications
 Basic    | Spec Sheet
