@@ -12,7 +12,7 @@
         framework_compatibility_matrix.xml
         framework_compatibility_matrix.xml
         vendor.samsung.hardware.hqm@1.0-matrix.xml
-        framework_compatibility_matrix.xml
+        framework_compatibility_matrix.xm
         vendor.samsung.hardware.tlc.iccc@1.0-matrix.xml
         vendor.samsung.hardware.tlc.tima@1.0-matrix.xml
         atn_compatibility_matrix.xml
@@ -87,7 +87,7 @@
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <fqname>@7.0::IDevicesFactory/default</fqname>
+        <fqname>@6.0::IDevicesFactory/default</fqname>
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.samsung.hardware.bluetooth.a2dp</name>
