@@ -151,7 +151,19 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor \
+    gps.conf \
+    flp.conf \
+    gnss_antenna_info.conf \
+    libloc_pla_headers \
+    liblocation_api_headers \
+    libgps.utils_headers \
+    liblocation_api \
+    libgps.utils \
+    libbatching \
+    libgeofencing \
+    libloc_core \
+    libgnss
 
 # Graphics
 PRODUCT_AAPT_CONFIG := normal
@@ -336,6 +348,9 @@ PRODUCT_PACKAGES += \
 
 # Perf
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.0.vendor \
+    vendor.qti.hardware.perf@2.1.vendor \
+    vendor.qti.hardware.perf@2.2.vendor \
     $(COMMON_PATH)/configs/perf/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     $(COMMON_PATH)/configs/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     $(COMMON_PATH)/configs/perf/commonsysnodesconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonsysnodesconfigs.xml \
@@ -423,7 +438,8 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.samsung-multihal \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor
+    android.hardware.sensors@2.0-ScopedWakelock.vendor \
+    sensors.samsung
 
 # Touch features
 PRODUCT_PACKAGES += \
