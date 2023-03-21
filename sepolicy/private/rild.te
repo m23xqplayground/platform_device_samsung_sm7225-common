@@ -1,0 +1,3 @@
+# /proc/25587/cmdline
+allow rild init:dir { search };
+allow rild init:file { read open getattr };
