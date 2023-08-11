@@ -16,9 +16,6 @@
 
 COMMON_PATH := device/samsung/sm7225-common
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 
 # Partitions
@@ -79,7 +76,6 @@ PRODUCT_PACKAGES += \
     audio.primary.default \
     libstdc++.vendor \
     audio.primary.lito \
-    audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
     libaudioalsa \
