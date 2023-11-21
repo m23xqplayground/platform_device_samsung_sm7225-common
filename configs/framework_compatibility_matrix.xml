@@ -13,8 +13,10 @@
         <name>android.hardware.sensors</name>
         <transport>hwbinder</transport>
         <version>1</version>
-        <fqname>@1.0::ISensors/default</fqname>
-        <fqname>@2.1::ISensors/default</fqname>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth.audio</name>
