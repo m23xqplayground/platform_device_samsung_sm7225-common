@@ -155,7 +155,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0.vendor \
     libtinyxml \
     libtinyxml2 \
-    gralloc.lito \
+    gralloc.default \
     memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
