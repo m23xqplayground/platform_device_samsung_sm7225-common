@@ -73,6 +73,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl.samsung-sm7225 \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.soundtrigger@2.2-impl \
+    android.hardware.soundtrigger@2.3-impl \
     audio.r_submix.default \
     audio.usb.default \
     libtinycompress \
@@ -155,7 +156,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0.vendor \
     libtinyxml \
     libtinyxml2 \
-    gralloc.default \
+    gralloc.lito \
     memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
@@ -163,7 +164,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.display.config@2.0.vendor
+    vendor.display.config@2.0.vendor \
+    android.hardware.graphics.composer@2.1-service
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -230,7 +232,8 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-V1-ndk_platform.vendor:64
+    android.hardware.light-V1-ndk_platform.vendor:64 \
+    android.hardware.light-service.samsung
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
