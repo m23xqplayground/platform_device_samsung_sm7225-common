@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer@3.0 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
+    libgrallocutils \
     android.hardware.renderscript@1.0-impl \
     libtinyxml \
     libtinyxml2 \
