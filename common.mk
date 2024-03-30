@@ -132,10 +132,10 @@ PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
 # Display
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
+    hwcomposer.lito \
+    android.hardware.graphics.composer@2.3-service-sm7250 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl \
@@ -146,7 +146,6 @@ PRODUCT_PACKAGES += \
     libsdmutils \
     memtrack.lito \
     libqdMetaData \
-    libvulkan \
     libqdMetaData.system \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
@@ -154,9 +153,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.display.config@1.5 \
-    vendor.display.config@1.11.vendor \
-    vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
 # Doze
@@ -458,7 +454,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung/aidl/power-libperfmgr \
-    hardware/interfaces
+    hardware/interfaces \
+    hardware/qcom/sm7250/display
 
 # Prop files
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
