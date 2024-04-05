@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2024 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -157,6 +157,12 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/batt_slate_mode
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED := 1
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # Fingerprint
 TARGET_SEC_FP_CALL_CANCEL_ON_ENROLL_COMPLETION := true
 TARGET_SEC_FP_CALL_NOTIFY_ON_CANCEL := true
@@ -176,15 +182,12 @@ BOARD_VENDOR := samsung
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Display
-TARGET_USES_HWC2 := true
-TARGET_USES_ION := true
-TARGET_DISABLED_UBWC := true
 TARGET_USES_COLOR_METADATA := true
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
-TARGET_USES_DRM_PP := true
+TARGET_USES_GRALLOC1 := true
 TARGET_USES_GRALLOC4 := true
-TARGET_USES_QTI_MAPPER_2_0 := true
-BOARD_USES_ADRENO := true
+TARGET_USES_HWC2 := true
+TARGET_USES_ION := true
 
 VENDOR_SECURITY_PATCH := 2023-09-01
 

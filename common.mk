@@ -120,16 +120,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# GNSS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor
-
-# Graphics
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-# A list of dpis to select prebuilt apk, in precedence order.
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
@@ -144,7 +134,6 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh \
     libdisplaydebug \
     gralloc.lito \
-    gralloc.default \
     memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
@@ -197,6 +186,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/android.hardware.gatekeeper@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service.rc
 
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@2.1-service-qti \
+    android.hardware.gnss@2.1.vendor
+
+# Graphics
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+# A list of dpis to select prebuilt apk, in precedence order.
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -226,6 +226,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-V1-ndk_platform.vendor:64 \
     android.hardware.light-service.samsung
+
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
@@ -359,10 +363,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    sensors.samsung
-    
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    android.frameworks.sensorservice@1.0.vendor
 
 # Touch features
 PRODUCT_PACKAGES += \
