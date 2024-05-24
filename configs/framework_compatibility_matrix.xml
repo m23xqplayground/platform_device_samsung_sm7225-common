@@ -901,12 +901,20 @@
             <instance>vppService</instance>
         </interface>
     </hal>
-    <hal format="hidl">
-        <name>vendor.samsung.hardware.wifi.hostapd</name>
-        <transport>hwbinder</transport>
-        <version>3.0</version>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.wifi.hostapd</name>
+        <version>1.0-3</version>
         <interface>
-            <name>ISehHostapd</name>
+            <name>IHostapdVendor</name>
+            <instance>default</instance>
+            <instance>wigighostapd</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.wifi.hostapd</name>
+        <version>1</version>
+        <interface>
+            <name>IHostapd</name>
             <instance>default</instance>
         </interface>
     </hal>
