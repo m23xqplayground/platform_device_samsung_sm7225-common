@@ -153,8 +153,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0
 
 # TouchFix
-PRODUCT_PACKAGES += \
-    TouchFix.samsung
+# PRODUCT_PACKAGES += \
+#    TouchFix.samsung
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -231,15 +231,11 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-V1-ndk_platform.vendor:64
+    android.hardware.light-service.samsung
 
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
-
-# LiveDisplay
-#  PRODUCT_PACKAGES += \
-#     vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7225
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -403,7 +399,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
     android.frameworks.sensorservice@1.0.vendor \
-    sensors.samsung
+    libsensorndkbridge
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
