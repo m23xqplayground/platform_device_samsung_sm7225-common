@@ -874,15 +874,6 @@ vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so
 vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
 vendor/bin/hw/android.hardware.health@2.1-service-samsung
 
-# HostApd
-vendor/bin/hostapd_cli
-vendor/bin/hw/hostapd
-vendor/etc/hostapd/hostapd.accept
-vendor/etc/hostapd/hostapd.deny
-vendor/etc/hostapd/hostapd_default.conf
-vendor/etc/init/hostapd.android.rc
-vendor/lib64/vendor.samsung.hardware.wifi.hostapd@3.0.so
-
 # IOP
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
