@@ -152,6 +152,9 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.9.vendor \
     vendor.display.config@2.0
 
+# TouchFix
+    TouchFix.samsung
+
 # Doze
 PRODUCT_PACKAGES += \
     SamsungDoze
