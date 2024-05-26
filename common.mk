@@ -127,7 +127,7 @@ PRODUCT_PACKAGES += \
 
 # CGroups
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
+    $(COMMON_PATH)/configs/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json
 
 # Display
 PRODUCT_PACKAGES += \
