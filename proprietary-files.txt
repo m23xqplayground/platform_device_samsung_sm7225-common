@@ -793,7 +793,7 @@ vendor/lib/libsdm-colormgr-algo.so
 vendor/lib/libsdm-diag.so
 vendor/lib/libtinyxml2_1.so
 vendor/lib64/libdisplayqos.so
-vendor/lib64/libsdedrm.so
+vendor/lib64/libsdedrm.so|3283d483aa41433b887e572f381984f43b6c78eb
 vendor/lib64/libtinyxml2_1.so
 vendor/lib/libdisplayskuutils.so
 vendor/lib64/libdisplayskuutils.so
