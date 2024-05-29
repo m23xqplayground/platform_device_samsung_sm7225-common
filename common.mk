@@ -447,9 +447,9 @@ PRODUCT_BOOT_JARS += \
 
 # Tether
 PRODUCT_PACKAGES += \
+    libipanat \
     ipacm \
     IPACM_cfg.xml \
-    libipanat \
     android.hardware.tetheroffload.config@1.0.vendor  \
     android.hardware.tetheroffload.control@1.0.vendor
 
