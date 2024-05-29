@@ -157,8 +157,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0
 
 # TouchFix
-# PRODUCT_PACKAGES += \
-#    TouchFix.samsung
+PRODUCT_PACKAGES += \
+    TouchFix.samsung
 
 # Doze
 PRODUCT_PACKAGES += \
