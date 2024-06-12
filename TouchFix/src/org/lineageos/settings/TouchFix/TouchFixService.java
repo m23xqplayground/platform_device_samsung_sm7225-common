@@ -59,6 +59,11 @@ public class SamsungTouchFixService extends Service {
 
         private static final String CMD_FILE_PATH = "/sys/class/sec/tsp/cmd";
         private static final String ENABLED_FILE_PATH = "/sys/class/sec/tsp/enabled";
+	private Context mContext;
+
+        public TouchFixService(Context context) {
+            mContext = context;
+        }
 
         protected void enable() {
             writeToFile(CMD_FILE_PATH, "check_connection");
@@ -94,6 +99,11 @@ public class SamsungTouchFixService extends Service {
     class AOTService {
 
         private static final String CMD_FILE_PATH = "/sys/class/sec/tsp/cmd";
+	private Context mContext;
+
+	public AOTService(Context context) {
+            mContext = context;
+        }
 
         protected void enable() {
             writeToFile(CMD_FILE_PATH, "aot_enable,1");
@@ -145,18 +155,6 @@ public class SamsungTouchFixService extends Service {
     @Override
     public IBinder onBind(Intent intent) {
         return null;
-    }
-
-    private void wakeOrLaunchTouchFixPulse() {
-        if (Utils.isWakeOnGestureEnabled(mContext)) {
-            if (DEBUG) Log.d(TAG, "Wake up display");
-            PowerManager powerManager = mContext.getSystemService(PowerManager.class);
-            powerManager.wakeUp(SystemClock.uptimeMillis(), PowerManager.WAKE_REASON_GESTURE, TAG);
-        } else {
-            if (DEBUG) Log.d(TAG, "Launch TouchFix pulse");
-            mContext.sendBroadcastAsUser(
-                    new Intent(TouchFix_INTENT), new UserHandle(UserHandle.USER_CURRENT));
-        }
     }
 
     private boolean isInteractive() {
