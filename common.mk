@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.cameraservice.device@2.0.vendor \
     android.hardware.camera.provider@2.5-service_64.samsung \
     libgrallocusage.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor \
+    vendor.qti.hardware.camera.device@1.0.vendor
 
 # CAS
 PRODUCT_PACKAGES += \
@@ -368,9 +368,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-# QMI
+# QCOM
 PRODUCT_PACKAGES += \
-    libjson
+    libjson \
+    libsqlite.vendor
 
 # QTI fwk-detect
 PRODUCT_PACKAGES += \
@@ -396,7 +397,8 @@ PRODUCT_PACKAGES += \
     librilutils \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     librmnetctl \
-    secril_config_svc
+    secril_config_svc \
+    libjsoncpp.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -456,7 +458,8 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor \
-    android.frameworks.cameraservice.service@2.1.vendor
+    android.frameworks.cameraservice.service@2.1.vendor \
+    libcamera_metadata.vendor
 
 # VNDK
 PRODUCT_PACKAGES += \
