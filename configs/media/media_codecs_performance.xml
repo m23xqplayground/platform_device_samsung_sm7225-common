@@ -218,6 +218,16 @@ limitations under the License.
             <!-- measured [61-63] lower-upper [16-168] median * 1.5 [93] -->
             <Limit name="measured-frame-rate-1280x720" range="35-76" />
         </MediaCodec>
+        <MediaCodec name="c2.android.av1-dav1d.decoder" type="video/av01" update="true">
+            <!-- measured [387-438] lower-upper [104-1111] median * 1.5 [619] -->
+            <Limit name="measured-frame-rate-352x288" range="230-505" />
+            <!-- measured [318-502] lower-upper [104-1104] median * 1.5 [616] -->
+            <Limit name="measured-frame-rate-640x360" range="228-502" />
+            <!-- measured [222-299] lower-upper [66-702] median * 1.5 [391] -->
+            <Limit name="measured-frame-rate-720x480" range="145-319" />
+            <!-- measured [85-112] lower-upper [25-266] median * 1.5 [148] -->
+            <Limit name="measured-frame-rate-1280x720" range="55-121" />
+        </MediaCodec>
         <MediaCodec name="c2.android.avc.decoder" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="115-169" />
             <Limit name="measured-frame-rate-720x480" range="40-60" />

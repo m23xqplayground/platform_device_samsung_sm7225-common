@@ -189,7 +189,7 @@ on boot
     chown system radio /sys/class/sensors/light_sensor/read_copr
     chown system radio /sys/class/sensors/light_sensor/boled_enable
     chown system radio /sys/class/sensors/light_sensor/hallic_info
-    chown system system /sys/class/sensors/light_sensor/lcd_onoff
+    chown system radio /sys/class/sensors/light_sensor/lcd_onoff
     chown system radio /sys/class/sensors/light_sensor/sensorhub_ddi_spi_check
     chown system radio /sys/class/sensors/light_sensor/light_cal
     chown system radio /sys/class/sensors/light_sensor/set_aod_rect
@@ -541,10 +541,9 @@ on boot
     chown system radio /sys/class/sensors/grip_sensor_wifi/grip_baseline_2ch
     chown system radio /sys/class/sensors/grip_sensor_wifi/grip_raw_2ch
     chown system radio /sys/class/sensors/grip_sensor_wifi/grip_check_2ch
-
     chown root input /sys/class/input/event*/device/enable
 
 on post-fs-data && property:ro.build.type=userdebug
-    # sensors log dir
+    #sensors log dir
     mkdir /data/vendor/sensors 0777 system system
     mkdir /data/vendor/sensors/scripts 0777 system system
