@@ -612,6 +612,10 @@ vendor/lib/libwvhidl.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
+# ESE Powermanager
+vendor/lib/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+
 # Feature
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib64/libsemnativecarrierfeature.so
