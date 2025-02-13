@@ -6,3 +6,8 @@ ro.netflix.bsp_rev=Q7250-19133-1
 
 # RIL
 ro.vendor.qti.va_aosp.support=1
+
+# Wifi Display
+wlan.wfd.hdcp=disable
+persist.debug.wfd.enable=1 
+persist.sys.wfd.virtual=0
