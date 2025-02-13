@@ -52,7 +52,7 @@ PRODUCT_PACKAGES += \
     init.audio.samsung.rc \
     init.nfc.samsung.rc \
     init.vendor.onebinary.rc \
-    init.vendor.rilchip.rc \
+    vendor.samsung.rilchip.qcom.rc \
     init.vendor.rilcommon.rc \
     init.vendor.sensors.rc \
     init.vendor.sysfw.rc \
@@ -172,6 +172,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     libdrmclearkeyplugin \
+    libcrypto_shim.vendor \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.4.vendor
 
