@@ -413,7 +413,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.sm7225
+    android.hardware.vibrator-service.samsung
 
 # Telephony
 PRODUCT_PACKAGES += \
