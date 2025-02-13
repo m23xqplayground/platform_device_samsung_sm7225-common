@@ -30,4 +30,10 @@
          should be either LOW (1) or HIGH (3).
     -->
     <integer name="config_vibration_supported_intensity_levels">3</integer>
+
+    <!--  Location on the screen of the center of the physical power button. This is a reasonable
+    default that should be overridden by device-specific overlays.  -->
+    <dimen name="physical_power_button_center_screen_location_y">620px</dimen>
+
+    <dimen name="rounded_corner_content_padding">0dp</dimen>
 </resources>
