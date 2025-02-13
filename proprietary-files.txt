@@ -865,15 +865,6 @@ vendor/firmware/a650_zap.mdt
 # Graphics (HDR)
 vendor/etc/hdr_samsung_mx.key
 
-# Health
-vendor/lib64/vendor.samsung.hardware.health@2.0.so
-vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-samsung.so|c2fe30e1db417bf33262f4a126f4ee496499958a
-vendor/lib/vendor.samsung.hardware.health@2.0.so
--vendor/etc/vintf/manifest/android.hardware.health@2.1-samsung.xml
-vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so
-vendor/etc/init/android.hardware.health@2.1-service-samsung.rc
-vendor/bin/hw/android.hardware.health@2.1-service-samsung
-
 # IOP
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
