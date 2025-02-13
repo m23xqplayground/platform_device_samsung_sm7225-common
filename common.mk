@@ -384,6 +384,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat \
     librmnetctl \
     secril_config_svc \
+    sehradiomanager \
     libjsoncpp.vendor
 
 # Sensors
