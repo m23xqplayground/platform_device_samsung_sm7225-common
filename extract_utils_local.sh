@@ -102,19 +102,20 @@ function setup_vendor_deps() {
 # sets up the internal state for a new vendor configuration.
 #
 function setup_vendor() {
-    local DEVICE="$1"
+    local MY_DIR="${BASH_SOURCE%/*}"
+    local DEVICE="m23xq"
     if [ -z "$DEVICE" ]; then
         echo "\$DEVICE must be set before including this script!"
         exit 1
     fi
 
-    local VENDOR="$2"
+    local VENDOR="samsung"
     if [ -z "$VENDOR" ]; then
         echo "\$VENDOR must be set before including this script!"
         exit 1
     fi
 
-    export ANDROID_ROOT="$3"
+    export ANDROID_ROOT="${MY_DIR}"
     if [ ! -d "$ANDROID_ROOT" ]; then
         echo "\$ANDROID_ROOT must be set and valid before including this script!"
         exit 1
@@ -1529,27 +1530,10 @@ function get_file_helper() {
 # Returns success if file can be pulled from the device or found locally
 #
 function get_file() {
-    local SRC="$3"
-    local SOURCES=("$1" "${1#/system}" "system/$1")
-
-    if [ "$SRC" = "adb" ]; then
-        for SOURCE in "${SOURCES[@]}"; do
-            adb pull "$SOURCE" "$2" >/dev/null 2>&1 && return 0
-        done
-
-        return 1
-    else
-        for SOURCE in "${SOURCES[@]}"; do
-            if [ -f "$SRC/$SOURCE" ] || [ -d "$SRC/$SOURCE" ]; then
-                get_file_helper "$SRC/$SOURCE" "$2" 2>/dev/null && return 0
-            fi
-        done
-
-        # try /vendor/odm for devices without /odm partition
-        [[ "$1" == /system/odm/* ]] && get_file_helper "$SRC/vendor/${1#/system}" "$2" 2>/dev/null && return 0
-
-        return 1
-    fi
+    local SRC="$(pwd)"
+    cp -r "$SRC/$1"           "$2" 2>/dev/null && return 0
+    cp -r "$SRC/${1#/system}" "$2" 2>/dev/null && return 0
+    cp -r "$SRC/system/$1"    "$2" 2>/dev/null && return 0
 }
 
 #
@@ -1985,9 +1969,9 @@ function prepare_images() {
 #
 function extract() {
     # Consume positional parameters
-    local PROPRIETARY_FILES_TXT="$1"
+    local PROPRIETARY_FILES_TXT="proprietary-files_local.txt"
     shift
-    local SRC="$1"
+    local SRC="$(pwd)"
     shift
     local SECTION=""
     local KANG=false
@@ -2035,10 +2019,6 @@ function extract() {
     local COUNT=${#SRC_LIST[@]}
     local OUTPUT_ROOT="$ANDROID_ROOT"/"$OUTDIR"/proprietary
     local OUTPUT_TMP="$EXTRACT_TMP_DIR"/"$OUTDIR"/proprietary
-
-    if [ "$SRC" = "adb" ]; then
-        init_adb_connection
-    fi
 
     if [ "$EXTRACT_STATE" -ne "1" ]; then
         prepare_images "$SRC"

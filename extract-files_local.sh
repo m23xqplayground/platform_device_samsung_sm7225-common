@@ -14,7 +14,7 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}"
 
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils_local.sh"
+HELPER="${ANDROID_ROOT}/extract_utils_local.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
