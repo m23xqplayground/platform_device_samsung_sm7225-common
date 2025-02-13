@@ -78,7 +78,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
-    libvolumelistener
+    libvolumelistener \
+    libqti_vndfwk_detect.vendor_32
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(COMMON_PATH)/audio/configs/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -116,7 +117,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service_64.samsung \
     libgrallocusage.vendor \
     libutilscallstack.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    vendor.qti.hardware.camera.device@1.0.vendor \
+    libui_shim.vendor
 
 # CAS
 PRODUCT_PACKAGES += \

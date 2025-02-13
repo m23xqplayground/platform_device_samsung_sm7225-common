@@ -73,13 +73,17 @@ function blob_fixup() {
             xxd -p -c0 "${2}" | sed "s/600e40f9820c805224008052e10315aae30314aa/600e40f9820c805224008052e10315aa030080d2/g" | xxd -r -p > "${2}".patched
             mv "${2}".patched "${2}"
             ;;
-	vendor/lib64/hw/gatekeeper.mdfpp.so|vendor/lib64/libskeymaster4device.so)
+	vendor/lib64/hw/gatekeeper.mdfpp.so|vendor/lib64/libskeymaster4device.so|vendor/lib64/libkeymaster_helper.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
             ;;
 	vendor/lib/libwvhidl.so|vendor/lib/mediadrm/libwvdrmengine.so)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+            ;;
+	vendor/lib/unihal_main@2.15.so|vendor/lib64/unihal_main@2.15.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
             ;;
 	*)
             return 1
@@ -92,6 +96,7 @@ function blob_fixup() {
 function blob_fixup_dry() {
     blob_fixup "$1" ""
 }
+
 if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
 # Initialize the helper for common device
 setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
