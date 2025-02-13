@@ -198,6 +198,9 @@ ro.camera.notify_nfc=1
 ro.vendor.nfc.support.ese=false
 ro.vendor.nfc.info.antpos=16
 
+# Media
+debug.stagefright.c2inputsurface=-1
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
