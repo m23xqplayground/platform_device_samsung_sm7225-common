@@ -25,12 +25,16 @@ vendor_A14/lib64/libadsprpc.so
 vendor_A14/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so
 vendor_A14/lib/rfsa/adsp/libbitml_nsp_skel.so
 vendor_A14/lib/rfsa/adsp/libdspCV_skel.so
+vendor_A14/lib/rfsa/adsp/libsns_device_mode_skel.so
+vendor_A14/lib64/rfsa/adsp/libsns_device_mode_skel.so
 vendor_A14/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor_A14/lib/rfsa/adsp/libscveT2T_skel.so
 vendor_A14/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor_A14/lib/rfsa/adsp/libfastcvadsp.so
 vendor_A14/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor_A14/lib/rfsa/adsp/libdsp_streamer_binning.so
+vendor_A14/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
+vendor_A14/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor_A14/lib/rfsa/adsp/capi_v2_aptX_CLHDAD_Encoder.so
 vendor_A14/lib/rfsa/adsp/libcamera_nn_skel.so
 vendor_A14/lib/rfsa/adsp/libcvpdsp_skel.so
@@ -48,6 +52,12 @@ vendor_A14/lib64/libc++_shared.so
 vendor_A14/lib/btaudio_offload_if.so
 vendor_A14/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor_A14/lib/hw/audio.primary.lito.so
+vendor_A14/lib/libaudioparsers.so
+vendor_A14/lib/libsecaudioinfo.so
+vendor_A14/lib/libsecaudiocoreutils.so
+vendor_A14/lib64/libaudioparsers.so
+vendor_A14/lib64/libsecaudioinfo.so
+vendor_A14/lib64/libsecaudiocoreutils.so
 vendor_A14/lib/libaudio_log_utils.so
 vendor_A14/lib/libaudioconfigstore.so
 vendor_A14/lib/vendor.qti.hardware.audiohalext@1.0.so
@@ -69,7 +79,8 @@ vendor_A14/lib/libhdmiedid.so;MODULE_SUFFIX=_vendor
 vendor_A14/lib/libhdmipassthru.so;MODULE_SUFFIX=_vendor
 vendor_A14/lib/libhfp.so;MODULE_SUFFIX=_vendor
 vendor_A14/lib/libqtigef.so
-vendor_A14/lib/libcirrusspkrprot.so;MODULE_SUFFIX=_vendor
+vendor_A14/lib64/libqtigef.so
+vendor_A14/lib/libcirrusspkrprot.so
 vendor_A14/lib/libsurround_3mic_proc.so
 vendor_A14/lib/libdrc.so
 vendor_A14/lib/libspkrprot.so;MODULE_SUFFIX=_vendor
@@ -130,6 +141,11 @@ vendor_A14/lib/soundfx/libasphere.so
 vendor_A14/lib/soundfx/libqcreverb.so
 vendor_A14/lib/soundfx/libshoebox.so
 vendor_A14/lib/soundfx/libqcbassboost.so
+vendor_A14/lib64/soundfx/libqcvirt.so
+vendor_A14/lib64/soundfx/libasphere.so
+vendor_A14/lib64/soundfx/libqcreverb.so
+vendor_A14/lib64/soundfx/libshoebox.so
+vendor_A14/lib64/soundfx/libqcbassboost.so
 
 # Audio (Firmware)
 vendor_A14/firmware/dax_param.bin
@@ -167,6 +183,8 @@ vendor_A14/lib/libidl.so
 vendor_A14/lib64/libidl.so
 vendor_A14/lib/com.qualcomm.qti.ant@1.0.so
 vendor_A14/lib64/com.qualcomm.qti.ant@1.0.so
+vendor_A14/lib/libqti_vndfwk_detect.so
+vendor_A14/lib64/libqti_vndfwk_detect.so
 vendor_A14/lib/libbthost_if.so
 vendor_A14/lib64/libbthost_if.so
 
@@ -202,6 +220,7 @@ vendor_A14/lib/libSceneDetector_v1.camera.samsung.so
 vendor_A14/lib/libarcsoft_multi_frame_video_hdr.so
 vendor_A14/lib/libarcsoft_object_tracking.so
 vendor_A14/lib/libcamera2ndk_vendor.so
+vendor_A14/lib/libcamerapostproc.so
 vendor_A14/lib/libcamxexternalformatutils.so
 vendor_A14/lib/libcamxifestriping.so
 vendor_A14/lib/libmultiobject_tracker.so
@@ -227,9 +246,47 @@ vendor_A14/lib64/libSceneDetector_v1.camera.samsung.so
 vendor_A14/lib64/libarcsoft_multi_frame_video_hdr.so
 vendor_A14/lib64/libarcsoft_object_tracking.so
 vendor_A14/lib64/libcamera2ndk_vendor.so
-# Need com.qti.feature2.generic and com.qti.chi.override from device-specific trees
-vendor_A14/lib/libcamerapostproc.so;DISABLE_DEPS
-vendor_A14/lib64/libcamerapostproc.so;DISABLE_DEPS
+vendor_A14/lib/libsuper_night_interface.so
+vendor_A14/lib/libHprFace_GAE_api.camera.samsung.so
+vendor_A14/lib/libjpegQtable_interface.so
+vendor_A14/lib/libFacePreProcessing.camera.samsung.so
+vendor_A14/lib/libimagecodec_native.quram.so
+vendor_A14/lib/libHandGesture.camera.samsung.so
+vendor_A14/lib/libhand_interaction.uniplugin@1.0.so
+vendor_A14/lib/libarcsoft_picportrait_video.so
+vendor_A14/lib/libexifa.camera.samsung.so
+vendor_A14/lib/libarcsoft_super_night_raw.so
+vendor_A14/lib/libjpegencoder_sw.unifunc.so
+vendor_A14/lib/libbeautyshot.arcsoft.so
+vendor_A14/lib/libvideobeauty.arcsoft.so
+vendor_A14/lib/libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so
+vendor_A14/lib/libfocuspeaking.so
+vendor_A14/lib/libscaler_hw.unifunc.so
+vendor_A14/lib/liblivefocus_capture_engine.so
+vendor_A14/lib/libsmartfocus_interface.so
+vendor_A14/lib/libhandgesture.arcsoft.so
+vendor_A14/lib/liblivefocus_preview_engine.so
+vendor_A14/lib/libDualCamBokehCapture.camera.samsung.so
+vendor_A14/lib/libLocalTM_capture_core.camera.samsung.so
+vendor_A14/lib/libvdis_core.so
+vendor_A14/lib/libface_landmark.arcsoft.so
+vendor_A14/lib/libhypermotion_interface.so
+vendor_A14/lib/liblivefocus_preview_interface.so
+vendor_A14/lib/libhigh_dynamic_range_bokeh.so
+vendor_A14/lib/libswldc_capture_core.camera.samsung.so
+vendor_A14/lib/libSEF.quram.so
+vendor_A14/lib/libFace_Landmark_API.camera.samsung.so
+vendor_A14/lib/libOpenCv.camera.samsung.so
+vendor_A14/lib/libsocial_image_enhancement.uniplugin@1.0.so
+vendor_A14/lib/libBeauty_v4.camera.samsung.so
+vendor_A14/lib/libsegmentationeffect.uniplugin@1.0.so
+vendor_A14/lib/libvideobeauty_interface.so
+vendor_A14/lib/libpadm.so
+vendor_A14/lib/libfocuspeaking_interface.so
+vendor_A14/lib/libimage_enhancement.arcsoft.so
+vendor_A14/lib/libvideobeauty.uniplugin@1.0.so
+vendor_A14/lib/libcamerapostproc.so
+vendor_A14/lib64/libcamerapostproc.so
 vendor_A14/lib64/libcamxexternalformatutils.so
 vendor_A14/lib64/libcamxifestriping.so
 vendor_A14/lib64/libmultiobject_tracker.so
@@ -242,6 +299,48 @@ vendor_A14/lib64/libsnaplite_native.so
 vendor_A14/lib64/libsnaplite_wrapper.so
 vendor_A14/lib64/libthirdparty_zoomtranslator_imp.so
 vendor_A14/lib/libvdis_interface.so
+vendor_A14/lib64/libsegmentationeffect.uniplugin@1.0.so
+vendor_A14/lib64/libLocalTM_wrapper.camera.samsung.so
+vendor_A14/lib64/libBeauty_v4.camera.samsung.so
+vendor_A14/lib64/libvideobeauty_interface.so
+vendor_A14/lib64/libpadm.so
+vendor_A14/lib64/libfocuspeaking_interface.so
+vendor_A14/lib64/libimage_enhancement.arcsoft.so
+vendor_A14/lib64/libvideobeauty.uniplugin@1.0.so
+vendor_A14/lib64/liblivefocus_capture_engine.so
+vendor_A14/lib64/libsmartfocus_interface.so
+vendor_A14/lib64/libhandgesture.arcsoft.so
+vendor_A14/lib64/liblivefocus_preview_engine.so
+vendor_A14/lib64/libDualCamBokehCapture.camera.samsung.so
+vendor_A14/lib64/libhypermotion_interface.so
+vendor_A14/lib64/liblivefocus_preview_interface.so
+vendor_A14/lib64/libhigh_dynamic_range_bokeh.so
+vendor_A14/lib64/libswldc_capture_core.camera.samsung.so
+vendor_A14/lib64/libSEF.quram.so
+vendor_A14/lib64/libLocalTM_capture_core.camera.samsung.so
+vendor_A14/lib64/libvdis_core.so
+vendor_A14/lib64/libface_landmark.arcsoft.so
+vendor_A14/lib64/libsuper_night_interface.so
+vendor_A14/lib64/libformatConverter.unifunc.so
+vendor_A14/lib64/libHprFace_GAE_api.camera.samsung.so
+vendor_A14/lib64/libjpegQtable_interface.so
+vendor_A14/lib64/libFacePreProcessing.camera.samsung.so
+vendor_A14/lib64/libimagecodec_native.quram.so
+vendor_A14/lib64/libHandGesture.camera.samsung.so
+vendor_A14/lib64/libhand_interaction.uniplugin@1.0.so
+vendor_A14/lib64/libarcsoft_picportrait_video.so
+vendor_A14/lib64/libDLInterface.camera.samsung.so
+vendor_A14/lib64/libexifa.camera.samsung.so
+vendor_A14/lib64/libarcsoft_super_night_raw.so
+vendor_A14/lib64/libjpegencoder_sw.unifunc.so
+vendor_A14/lib64/libbeautyshot.arcsoft.so
+vendor_A14/lib64/libvideobeauty.arcsoft.so
+vendor_A14/lib64/libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so
+vendor_A14/lib64/libfocuspeaking.so
+vendor_A14/lib64/libscaler_hw.unifunc.so
+vendor_A14/lib64/libFace_Landmark_API.camera.samsung.so
+vendor_A14/lib64/libOpenCv.camera.samsung.so
+vendor_A14/lib64/libsocial_image_enhancement.uniplugin@1.0.so
 vendor_A14/lib64/libvdis_interface.so
 vendor_A14/lib/libmmcamera_faceproc.so
 vendor_A14/lib64/libmmcamera_faceproc.so
@@ -449,8 +548,8 @@ vendor_A14/lib/libcamxfacialfeatures.so
 vendor_A14/lib64/libcamxfacialfeatures.so
 
 # Camera (OOT)
-vendor/lib/android.hardware.camera.provider@2.4-legacy.so|8ba57251a8f21990fcb94278ffac376c433f124c
-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|d1d56a731570988d744ca55a6d175cc7627eaaa3
+vendor_A14/lib/android.hardware.camera.provider@2.4-legacy.so|8ba57251a8f21990fcb94278ffac376c433f124c
+vendor_A14/lib64/android.hardware.camera.provider@2.4-legacy.so|d1d56a731570988d744ca55a6d175cc7627eaaa3
 
 # Camera Firmware
 vendor_A14/firmware/CAMERA_ICP.elf
@@ -553,7 +652,7 @@ vendor_A14/etc/cacert_location.pem
 -vendor_A14/app/CACertService/CACertService.apk
 vendor_A14/lib/libjnihelper.so
 vendor_A14/lib64/libjnihelper.so
-vendor_A14/bin/lowi-server;DISABLE_DEPS
+vendor_A14/bin/lowi-server
 vendor_A14/bin/xtra-daemon
 vendor_A14/bin/loc_launcher
 -vendor_A14/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
@@ -985,6 +1084,7 @@ vendor_A14/lib64/librilutils.so
 vendor_A14/lib64/libengmode15.so
 vendor_A14/lib64/libengmode2lite.so
 vendor_A14/lib64/libengmode_tlc.so
+vendor_A14/lib64/libnlnetmgr.so
 vendor_A14/lib/libqrtr.so
 vendor_A14/lib64/libqrtr.so
 vendor_A14/lib/libsystem_health_mon.so
