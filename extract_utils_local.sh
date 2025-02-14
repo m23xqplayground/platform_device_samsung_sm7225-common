@@ -54,14 +54,14 @@ trap cleanup 0
 # Sets up common dependencies for extraction
 #
 function setup_vendor_deps() {
-    export ANDROID_ROOT="$1"
+    export ANDROID_ROOT="${MY_DIR}"
     if [ ! -d "$ANDROID_ROOT" ]; then
         echo "\$ANDROID_ROOT must be set and valid before including this script!"
         exit 1
     fi
 
-    export BINARIES_LOCATION="$ANDROID_ROOT"/prebuilts/extract-tools/${HOST}-x86/bin
-    export CLANG_BINUTILS="$ANDROID_ROOT"/prebuilts/clang/host/${HOST}-x86/llvm-binutils-stable
+    export BINARIES_LOCATION="${HOME}/linux-x86-main/bin"
+    export CLANG_BINUTILS="${HOME}/linux-x86-main/llvm-binutils-stable"
     export JDK_BINARIES_LOCATION="$ANDROID_ROOT"/prebuilts/jdk/jdk21/${HOST}-x86/bin
     export COMMON_BINARIES_LOCATION="$ANDROID_ROOT"/prebuilts/extract-tools/common
 
@@ -103,7 +103,7 @@ function setup_vendor_deps() {
 #
 function setup_vendor() {
     local MY_DIR="${BASH_SOURCE%/*}"
-    local DEVICE="m23xq"
+    local DEVICE="sm7225-common"
     if [ -z "$DEVICE" ]; then
         echo "\$DEVICE must be set before including this script!"
         exit 1
@@ -441,21 +441,25 @@ function lib_to_package_fixup() {
 # $1: File name inside target list
 #
 function write_package_shared_libs() {
-    local SRC="$1"
+    local SRC="vendor_A14"
     local LOCATION="$2"
+    local PARTITION="$1"
     local FILE="$3"
-    local PARTITION="$4"
 
-    local FILE_PATH="$ANDROID_ROOT/$OUTDIR/$SRC/$LOCATION/$FILE"
-    local LIBS=$("$OBJDUMP" -p "$FILE_PATH" 2>/dev/null | sed -n 's/^\s*NEEDED\s*\(.*\).so$/\1/p')
-    local PACKAGES=$(
-        while IFS= read -r LIB; do
-            lib_to_package_fixup "$LIB" "$PARTITION" "$FILE" || echo "$LIB"
-        done <<<"$LIBS"
-    )
-    local PACKAGES_LIST=$(echo "$PACKAGES" | sed 's/\(.\+\)/"\1",/g' | tr '\n' ' ')
+        local FILE_PATH="vendor_A14/$LOCATION/$FILE"
+        # Extract shared libraries using objdump
+        local LIBS=$("$OBJDUMP" -p "$FILE_PATH" 2>/dev/null | sed -n 's/^\s*NEEDED\s*\(.*\).so$/\1/p')
+        # Convert library names to package names
+        local PACKAGES=$(
+            while IFS= read -r LIB; do
+                lib_to_package_fixup "$LIB" "$PARTITION" "$FILE" || echo "$LIB"
+            done <<<"$LIBS"
+        )
 
-    printf '\t\t\tshared_libs: [%s],\n' "$PACKAGES_LIST"
+        local PACKAGES_LIST=$(echo "$PACKAGES" | sed 's/\(.\+\)/"\1",/g' | tr '\n' ' ')
+
+        # Print output in the required format
+        printf '\t\t\tshared_libs: [%s],\n' "$PACKAGES_LIST"
 }
 
 #
@@ -527,7 +531,7 @@ function write_blueprint_packages() {
 
     local SRC="proprietary/$SRC_REL"
 
-    [ "$COMMON" -eq 1 ] && local VENDOR="${VENDOR_COMMON:-$VENDOR}"
+    [ "$COMMON" -eq 1 ] && local VENDOR="samsung"
 
     while IFS= read -r P; do
         if [ "$P" = "" ]; then
@@ -539,6 +543,7 @@ function write_blueprint_packages() {
         local SPEC_ARGS=$(spec_target_args "$FILE" "$P")
         local ARGS=(${SPEC_ARGS//;/ })
         local DIRNAME="${FILE%/*}"
+	local VENDOR=samsung
         if [ "$DIRNAME" = "$FILE" ]; then
             DIRNAME="."
         fi
@@ -593,28 +598,37 @@ function write_blueprint_packages() {
             printf '\t\tnone: true,\n'
             printf '\t},\n'
             printf '\ttarget: {\n'
-            if [ "$EXTRA" = "both" ] || [ "$EXTRA" = "32" ]; then
-                printf '\t\t%s: {\n' $(elf_format_android "$ANDROID_ROOT/$OUTDIR/$SRC/lib/$FILE")
+            if [ "$EXTRA" = "both" ]; then
+                printf '\t\tandroid_arm: {\n'
                 printf '\t\t\tsrcs: ["%s/lib/%s"],\n' "$SRC" "$FILE"
-                if [ -n "$GENERATE_DEPS" ]; then
-                    write_package_shared_libs "$SRC" "lib" "$FILE" "$PARTITION"
+		if [ -n "$GENERATE_DEPS" ]; then
+                    write_package_shared_libs "vendor_A14" "lib" "$FILE"
                 fi
                 printf '\t\t},\n'
-            fi
-
-            if [ "$EXTRA" = "both" ] || [ "$EXTRA" = "64" ]; then
-                printf '\t\t%s: {\n' $(elf_format_android "$ANDROID_ROOT/$OUTDIR/$SRC/lib64/$FILE")
+                printf '\t\tandroid_arm64: {\n'
                 printf '\t\t\tsrcs: ["%s/lib64/%s"],\n' "$SRC" "$FILE"
-                if [ -n "$GENERATE_DEPS" ]; then
-                    write_package_shared_libs "$SRC" "lib64" "$FILE" "$PARTITION"
+		if [ -n "$GENERATE_DEPS" ]; then
+                    write_package_shared_libs "vendor_A14" "lib64" "$FILE"
+                fi
+                printf '\t\t},\n'
+            elif [ "$EXTRA" = "64" ]; then
+                printf '\t\tandroid_arm64: {\n'
+                printf '\t\t\tsrcs: ["%s/lib64/%s"],\n' "$SRC" "$FILE"
+		if [ -n "$GENERATE_DEPS" ]; then
+                    write_package_shared_libs "vendor_A14" "lib64" "$FILE"
+                fi
+                printf '\t\t},\n'
+            else
+                printf '\t\tandroid_arm: {\n'
+                printf '\t\t\tsrcs: ["%s/lib/%s"],\n' "$SRC" "$FILE"
+		if [ -n "$GENERATE_DEPS" ]; then
+                    write_package_shared_libs "vendor_A14" "lib" "$FILE"
                 fi
                 printf '\t\t},\n'
             fi
             printf '\t},\n'
             printf '\tcompile_multilib: "%s",\n' "$EXTRA"
-            if [ -n "$DISABLE_CHECKELF" ]; then
-                printf '\tcheck_elf_files: false,\n'
-            fi
+            printf '\tcheck_elf_files: false,\n'
         elif [ "$CLASS" = "RFSA" ]; then
             printf 'prebuilt_rfsa {\n'
             printf '\tname: "%s",\n' "$PKGNAME"
@@ -1107,8 +1121,8 @@ function write_blueprint_header() {
         rm "$1"
     fi
 
-    [ "$COMMON" -eq 1 ] && local DEVICE="$DEVICE_COMMON"
-    [ "$COMMON" -eq 1 ] && local VENDOR="${VENDOR_COMMON:-$VENDOR}"
+    [ "$COMMON" -eq 1 ] && local DEVICE="sm7225-common"
+    [ "$COMMON" -eq 1 ] && local VENDOR="samsung"
 
     cat <<EOF >>"$1"
 // Automatically generated file. DO NOT MODIFY
@@ -1132,8 +1146,8 @@ function write_makefile_header() {
         rm "$1"
     fi
 
-    [ "$COMMON" -eq 1 ] && local DEVICE="$DEVICE_COMMON"
-    [ "$COMMON" -eq 1 ] && local VENDOR="${VENDOR_COMMON:-$VENDOR}"
+    [ "$COMMON" -eq 1 ] && local DEVICE="sm7225-common"
+    [ "$COMMON" -eq 1 ] && local VENDOR="samsung"
 
     cat <<EOF >>"$1"
 # Automatically generated file. DO NOT MODIFY
@@ -1157,8 +1171,8 @@ function write_xml_header() {
         rm "$1"
     fi
 
-    [ "$COMMON" -eq 1 ] && local DEVICE="$DEVICE_COMMON"
-    [ "$COMMON" -eq 1 ] && local VENDOR="${VENDOR_COMMON:-$VENDOR}"
+    [ "$COMMON" -eq 1 ] && local DEVICE="sm7225-common"
+    [ "$COMMON" -eq 1 ] && local VENDOR="samsung"
 
     cat <<EOF >>"$1"
 <?xml version="1.0" encoding="utf-8"?>
@@ -1302,8 +1316,8 @@ EOF
 
 EOF
 
-    [ "$COMMON" -eq 1 ] && local DEVICE="$DEVICE_COMMON"
-    [ "$COMMON" -eq 1 ] && local VENDOR="${VENDOR_COMMON:-$VENDOR}"
+    [ "$COMMON" -eq 1 ] && local DEVICE="sm7225-common"
+    [ "$COMMON" -eq 1 ] && local VENDOR="samsung"
     cat <<EOF >>"$PRODUCTMK"
 PRODUCT_SOONG_NAMESPACES += \\
     vendor/$VENDOR/$DEVICE
@@ -1971,7 +1985,7 @@ function extract() {
     # Consume positional parameters
     local PROPRIETARY_FILES_TXT="proprietary-files_local.txt"
     shift
-    local SRC="$(pwd)"
+    local SRC="$ANDROID_ROOT"
     shift
     local SECTION=""
     local KANG=false
