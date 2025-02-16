@@ -144,7 +144,7 @@ PRODUCT_PACKAGES += \
     libtinyxml2 \
     init.qti.display_boot.sh \
     libdisplaydebug \
-    hwcomposer.qcom \
+    gralloc.lito \
     libqdMetaData \
     libdisplayconfig.qti \
     vendor.qti.hardware.display.mapper@1.1.vendor \
