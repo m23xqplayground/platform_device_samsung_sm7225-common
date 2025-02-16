@@ -55,6 +55,8 @@ vendor_A14/lib/hw/audio.primary.lito.so
 vendor_A14/lib/libaudioparsers.so
 vendor_A14/lib/libsecaudioinfo.so
 vendor_A14/lib/libsecaudiocoreutils.so
+vendor_A14/lib/libwebrtc_audio_preprocessing.so
+vendor_A14/lib64/libwebrtc_audio_preprocessing.so
 vendor_A14/lib64/libaudioparsers.so
 vendor_A14/lib64/libsecaudioinfo.so
 vendor_A14/lib64/libsecaudiocoreutils.so
@@ -67,6 +69,18 @@ vendor_A14/lib64/libaudioconfigstore.so
 vendor_A14/lib/libsamsungVoipResampler.so
 vendor_A14/lib/lib_soundaliveresampler.so
 vendor_A14/lib/lib_SoundAlive_SRC384_ver320.so
+vendor_A14/lib/lib_SoundAlive_3DPosition_ver202.so
+vendor_A14/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor_A14/lib/lib_SoundAlive_AlbumArt_ver105.so
+vendor_A14/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor_A14/lib/lib_SoundAlive_play_plus_ver400.so
+vendor_A14/lib64/lib_SoundAlive_play_plus_ver400.so
+vendor_A14/lib/libspatializerparamstorage.so
+vendor_A14/lib64/libspatializerparamstorage.so
+vendor_A14/lib/spatializer-aidl-V1-cpp.so
+vendor_A14/lib64/spatializer-aidl-V1-cpp.so
+vendor_A14/lib/libwebrtc_audio_preprocessing.so
+vendor_A14/lib64/libwebrtc_audio_preprocessing.so
 vendor_A14/lib/librecordalive.so
 vendor_A14/lib/lib_SamsungRec_07010.so
 vendor_A14/lib/libexthwplugin.so;MODULE_SUFFIX=_vendor
@@ -536,6 +550,8 @@ vendor_A14/lib64/libcamximageformatutils.so
 vendor_A14/lib64/hw/camera.unihal.default.so
 vendor_A14/lib64/hw/camera.qcom.so
 vendor_A14/lib64/libremosaiclib.so
+vendor_A14/lib/librmsclib1.so
+vendor_A14/lib64/librmsclib1.so
 vendor_A14/lib64/libscveCommon_stub.so
 vendor_A14/lib64/libqcwrappercommon.so
 vendor_A14/lib64/libscveObjectSegmentation_stub.so
