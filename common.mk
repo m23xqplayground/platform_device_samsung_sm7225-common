@@ -143,13 +143,13 @@ PRODUCT_PACKAGES += \
     init.qti.display_boot.sh \
     libdisplaydebug \
     gralloc.lito \
+    memtrack.lito \
     libqdMetaData \
     libdisplayconfig.qti \
     vendor.qti.hardware.display.mapper@1.1.vendor \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.qti.hardware.memtrack-service \
     vendor.display.config@1.11.vendor \
     vendor.display.config@1.5 \
     vendor.display.config@1.9 \
