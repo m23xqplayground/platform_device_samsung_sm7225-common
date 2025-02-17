@@ -135,6 +135,9 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.renderscript@1.0-impl \
     libtinyxml \
     libtinyxml2 \
     init.qti.display_boot.sh \
