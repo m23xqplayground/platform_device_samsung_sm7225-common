@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    android.hardware.camera.device@1.0 \
     android.hardware.camera.device@3.6.vendor \
     android.frameworks.sensorservice@1.0.vendor \
     android.frameworks.cameraservice.common@2.0.vendor \
