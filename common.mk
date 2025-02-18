@@ -111,7 +111,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung \
     libgrallocusage.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    libutilscallstack.vendor \
+    vendor.qti.hardware.camera.device@1.0.vendor \
+    libui_shim.vendor
 
 # CAS
 PRODUCT_PACKAGES += \
