@@ -217,10 +217,6 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 
-# Treble
-BOARD_VNDK_VERSION := current
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-
 # Vibrator
 $(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
 
