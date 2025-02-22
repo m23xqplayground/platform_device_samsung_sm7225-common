@@ -159,8 +159,8 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.5 \
     vendor.display.config@1.9 \
     vendor.display.config@1.9.vendor \
-    vendor.display.config@2.0
-    vendor.display.config@2.0.vendor \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor
 
 # Doze
 PRODUCT_PACKAGES += \
