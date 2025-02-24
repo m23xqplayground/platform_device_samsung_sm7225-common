@@ -146,6 +146,7 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     libtinyxml2 \
     init.qti.display_boot.sh \
+    init.qti.display_boot.rc \
     libdisplaydebug \
     gralloc.lito \
     memtrack.lito \
@@ -155,11 +156,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.display.config@1.11.vendor \
-    vendor.display.config@1.5 \
-    vendor.display.config@1.9 \
-    vendor.display.config@1.9.vendor \
-    vendor.display.config@2.0
 
 # Doze
 PRODUCT_PACKAGES += \
