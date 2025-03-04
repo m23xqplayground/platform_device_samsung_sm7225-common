@@ -145,6 +145,7 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \
     libtinyxml \
     libtinyxml2 \
+    init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     libdisplaydebug \
     gralloc.lito \
@@ -155,6 +156,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@2.0.vendor \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.display.config@2.0.vendor \
 
 # Doze
 PRODUCT_PACKAGES += \
