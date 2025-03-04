@@ -145,7 +145,6 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \
     libtinyxml \
     libtinyxml2 \
-    init.qti.display_boot.rc \
     init.qti.display_boot.sh \
     libdisplaydebug \
     gralloc.lito \
