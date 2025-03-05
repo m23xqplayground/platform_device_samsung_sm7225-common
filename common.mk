@@ -146,7 +146,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
-    hwcomposer.qcom \
+    gralloc.qcom \
     libtinyxml \
     libtinyxml2 \
     libqdMetaData \
