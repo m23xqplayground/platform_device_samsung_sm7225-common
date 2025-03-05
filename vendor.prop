@@ -133,7 +133,7 @@ vendor.display.enable_optimize_refresh=1
 vendor.display.enable_posted_start_dyn=1
 vendor.display.idle_time=0
 vendor.display.idle_time_inactive=0
-vendor.display.use_smooth_motion=1
+vendor.display.use_smooth_motion=0
 debug.sf.early_phase_offset_ns=100000
 debug.sf.early_app_phase_offset_ns=100000
 debug.sf.early_gl_phase_offset_ns=100000
@@ -200,6 +200,9 @@ ro.vendor.nfc.info.antpos=16
 
 # Media
 debug.stagefright.c2inputsurface=-1
+
+# OEM Unlock
+ro.oem_unlock_supported=1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
