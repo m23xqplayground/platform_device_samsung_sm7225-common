@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
     fstab.default.ramdisk \
     fstab.ramplus \
     init.qcom.rc \
+    init.qcom.usb.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.rc \
@@ -60,14 +61,9 @@ PRODUCT_PACKAGES += \
 # Vendor scripts
 PRODUCT_PACKAGES += \
     init.class_main.sh \
-    init.qcom.class_core.sh \
-    init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.sh \
-    init.qti.chg_policy.sh \
-    init.qti.dcvs.sh \
-    init.qti.early_init.sh \
-    init.qti.media.sh
+    init.qti.chg_policy.sh
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -406,11 +402,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.qti \
-    init.qcom.usb.rc \
-    init.qcom.usb.sh
-
-PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/usb/etc
+    android.hardware.usb-service.qti
 
 # Vibrator
 PRODUCT_PACKAGES += \
