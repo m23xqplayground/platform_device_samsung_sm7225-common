@@ -392,6 +392,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
     android.frameworks.sensorservice@1.0.vendor \
+    sensors.samsung \
     libsensorndkbridge
     
 PRODUCT_COPY_FILES += \
