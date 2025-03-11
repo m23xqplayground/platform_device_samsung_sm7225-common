@@ -1056,7 +1056,6 @@ vendor/lib/libqcmaputils.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libengmode_client.so
 vendor/lib64/libsec-ril.so|0d42f0f7570f28f3d227373df9f9e319ac6c945af56adfa5e2d06fb1dd355ae5
-vendor/lib64/libsecril-client.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libril_sem.so
 vendor/lib64/libSemDataProps.so
 vendor/lib64/libSemTelephonyProps.so
