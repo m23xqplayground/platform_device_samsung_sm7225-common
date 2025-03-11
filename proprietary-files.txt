@@ -609,6 +609,10 @@ vendor/lib64/libtrustedapploader.so
 vendor/lib/libwvhidl.so|ea3d1828e4a02e477359ec1f75e5ed220c6d44c694ebb21bc8d0ac8ee323e6b5
 vendor/lib/mediadrm/libwvdrmengine.so|93700e1002bf9abbf2e0594471e0efb7144317989d73d787c165c507c2caaaa2
 
+# ESE
+vendor/lib/vendor.qti.esepowermanager@1.0.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so
+
 # Feature
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib64/libsemnativecarrierfeature.so
