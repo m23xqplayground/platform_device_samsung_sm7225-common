@@ -123,6 +123,8 @@ PRODUCT_PACKAGES += \
     libutilscallstack.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
+$(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
+
 # CAS
 PRODUCT_PACKAGES += \
     android.hardware.cas@1.2-service
