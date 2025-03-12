@@ -146,15 +146,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
     libdisplayconfig.system.qti \
-    libmemutils \
     libqdMetaData \
     libqdMetaData.system \
     libsdmcore \
     libsdmutils \
     libtinyxml \
-    memtrack.default \
 
 PRODUCT_PACKAGES += \
+    vendor.qti.hardware.memtrack-service \
     android.hardware.graphics.common-V1-ndk_platform.vendor \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
