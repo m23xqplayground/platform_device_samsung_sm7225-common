@@ -740,7 +740,6 @@ vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 vendor/bin/hw/android.hardware.gnss@2.1-service-qti|e9824db34d8fa8479724c14352d0f6a13ee78e26
 
 # Graphics
--vendor/app/com.qualcomm.qti.gpudrivers.lito.api30/com.qualcomm.qti.gpudrivers.lito.api30.apk;PRESIGNED
 vendor/bin/hw/vendor.display.color@1.0-service
 vendor/etc/init/vendor.display.color@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
