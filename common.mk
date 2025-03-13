@@ -457,13 +457,8 @@ PRODUCT_PACKAGES += \
     wpa_cli \
     wpa_supplicant \
     wpa_supplicant.conf
-
-# Fix ADB
-PRODUCT_SYSTEM_PROPERTIES += \
-    ro.control_privapp_permissions=log
     
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.control_privapp_permissions=log \
     ro.secure=0 \
     ro.debuggable=1 \
     ro.adb.secure=0 \
