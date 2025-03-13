@@ -336,7 +336,8 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.pixel-libperfmgr \
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client \
     android.hardware.power@1.2.vendor
 
 PRODUCT_COPY_FILES += \
@@ -486,6 +487,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     bootable/deprecated-ota \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/samsung
