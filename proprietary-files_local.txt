@@ -111,6 +111,12 @@ vendor_A14/lib64/libgcs-osal.so
 vendor_A14/lib64/libgcs-calwrapper.so
 vendor_A14/lib/libmulawdec.so
 vendor_A14/lib64/libmulawdec.so
+vendor_A14/lib/libcapiv2svacnn.so
+vendor_A14/lib64/libcapiv2svacnn.so
+vendor_A14/lib/libcapiv2svarnn.so
+vendor_A14/lib64/libcapiv2svarnn.so
+vendor_A14/lib/libcapiv2vop.so
+vendor_A14/lib64/libcapiv2vop.so
 
 # Audio (modules)
 vendor_A14/lib/soundfx/libaudioeffectoffload.so
@@ -574,6 +580,7 @@ vendor_A14/firmware/multical.bin
 # Charger
 vendor_A14/bin/hvdcp_opti
 vendor_A14/etc/charger_fstab.qti
+vendor_A14/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CDSP
 vendor_A14/bin/cdsprpcd
@@ -603,6 +610,47 @@ vendor_A14/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor_A14/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor_A14/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor_A14/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+
+# CNE
+vendor_A14/bin/mutualex;DISABLE_CHECKELF
+vendor_A14/etc/init/mutualex.rc
+vendor_A14/etc/default-permissions/com.qualcomm.qti.cne.xml
+vendor_A14/lib/libcneoplookup.so
+vendor_A14/lib64/libcneoplookup.so
+vendor_A14/lib64/vendor.qti.data.slm@1.0.so
+vendor_A14/lib64/vendor.qti.hardware.data.connection@1.0.so
+vendor_A14/lib64/vendor.qti.hardware.data.connection@1.1.so
+vendor_A14/lib64/vendor.qti.hardware.data.dynamicdds@1.0.so
+vendor_A14/lib64/vendor.qti.latency@2.0.so
+
+# CNE Profiles
+vendor_A14/etc/cne/wqeclient/ATT/ATT_profile1.xml
+vendor_A14/etc/cne/wqeclient/ATT/ATT_profile2.xml
+vendor_A14/etc/cne/wqeclient/ATT/ATT_profile3.xml
+vendor_A14/etc/cne/wqeclient/ATT/ATT_profile4.xml
+vendor_A14/etc/cne/wqeclient/ATT/ATT_profile5.xml
+vendor_A14/etc/cne/wqeclient/ATT/ATT_profile6.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile15.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile16.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile17.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile18.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile19.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile2.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile20.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile21.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile32.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile4.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile5.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile6.xml
+vendor_A14/etc/cne/wqeclient/ROW/ROW_profile7.xml
+vendor_A14/etc/cne/wqeclient/VZW/VZW_profile1.xml
+vendor_A14/etc/cne/wqeclient/VZW/VZW_profile2.xml
+vendor_A14/etc/cne/wqeclient/VZW/VZW_profile3.xml
+vendor_A14/etc/cne/wqeclient/VZW/VZW_profile4.xml
+vendor_A14/etc/cne/wqeclient/VZW/VZW_profile5.xml
+vendor_A14/etc/cne/wqeclient/VZW/VZW_profile6.xml
 
 # CVP (DSP)
 vendor_A14/lib/libcvp_common.so
@@ -659,6 +707,8 @@ vendor_A14/lib/vendor.qti.hardware.fm@1.0.so
 vendor_A14/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
 vendor_A14/lib64/vendor.qti.hardware.fm@1.0.so
 vendor_A14/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
+system_ext_A14/lib64/fm_helium.so
+system_ext_A14/lib64/libfm-hci.so
 
 # Gatekeeper
 vendor_A14/lib64/hw/gatekeeper.mdfpp.so|a74b6edbd0ad977f3f5abc74b3f938d44bc08c5f4ee107822b1a2a65322d7a8d
@@ -758,25 +808,6 @@ vendor_A14/lib64/vendor.samsung.hardware.gnss@2.0.so
 vendor_A14/bin/hw/android.hardware.gnss@2.1-service-qti|e9824db34d8fa8479724c14352d0f6a13ee78e26
 
 # Graphics
-vendor_A14/bin/hw/vendor.display.color@1.0-service
-vendor_A14/etc/init/vendor.display.color@1.0-service.rc
-vendor_A14/etc/init/vendor.qti.hardware.display.composer-service.rc
-vendor_A14/etc/init/vendor.qti.hardware.display.allocator-service.rc
-vendor_A14/bin/qdcmss
-vendor_A14/bin/ppd
-vendor_A14/etc/init/qdcmss.rc
-vendor_A14/lib/vendor.display.color@1.0.so
-vendor_A14/lib/vendor.display.color@1.1.so
-vendor_A14/lib/vendor.display.color@1.2.so
-vendor_A14/lib/vendor.display.color@1.3.so
-vendor_A14/lib/vendor.display.color@1.4.so
-vendor_A14/lib/vendor.display.color@1.5.so
-vendor_A14/lib64/vendor.display.color@1.0.so
-vendor_A14/lib64/vendor.display.color@1.1.so
-vendor_A14/lib64/vendor.display.color@1.2.so
-vendor_A14/lib64/vendor.display.color@1.3.so
-vendor_A14/lib64/vendor.display.color@1.4.so
-vendor_A14/lib64/vendor.display.color@1.5.so
 vendor_A14/lib64/vendor.display.config@1.0.so
 vendor_A14/lib64/vendor.display.config@1.1.so
 vendor_A14/lib64/vendor.display.config@1.10.so
@@ -790,33 +821,31 @@ vendor_A14/lib64/vendor.display.config@1.7.so
 vendor_A14/lib64/vendor.display.config@1.8.so
 vendor_A14/lib64/vendor.display.config@1.9.so
 vendor_A14/lib64/vendor.display.config@2.0.so
-vendor_A14/lib/libsdm-disp-vndapis.so
-vendor_A14/lib64/libsdm-disp-vndapis.so
-vendor_A14/lib/vendor.display.postproc@1.0.so
-vendor_A14/lib64/vendor.display.postproc@1.0.so
-vendor_A14/lib/libhdr_tm.so
-vendor_A14/lib64/libhdr_tm.so
-vendor_A14/lib/libdisplayqos.so
-vendor_A14/lib/libsdedrm.so
-vendor_A14/lib/libsdm-color.so
-vendor_A14/lib/libsdm-colormgr-algo.so
-vendor_A14/lib/libsdm-diag.so
-vendor_A14/lib/libtinyxml2_1.so
-vendor_A14/lib64/libdisplayqos.so
-vendor_A14/lib64/libsdedrm.so|3283d483aa41433b887e572f381984f43b6c78eb
-vendor_A14/lib64/libtinyxml2_1.so
-vendor_A14/lib/libdisplayskuutils.so
-vendor_A14/lib64/libdisplayskuutils.so
-vendor_A14/lib/libdisp-aba.so
-vendor_A14/lib64/libdisp-aba.so
-vendor_A14/lib/libdpps.so
-vendor_A14/lib64/libdpps.so
 vendor_A14/lib/libpvr.so
 vendor_A14/lib64/libpvr.so
-vendor_A14/lib/libqseed3.so
-vendor_A14/lib64/libqseed3.so
 
-# From Fairphone 4 - FP4.TP1V.C.073.20230905
+# Display (From FP4.TP1V.C.073.20230905)
+vendor_A14/bin/hw/vendor.display.color@1.0-service|1fa47c2d3fff52c362848c59dbc40b4073c59ea9
+vendor_A14/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor_A14/bin/qdcmss|536c34abfbf7833df440bfcd264bacdc88318067
+vendor_A14/bin/ppd|c478fa8957564bf1b2649b6ba80c07f72b0b318f
+vendor_A14/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
+vendor_A14/lib64/vendor.display.color@1.0.so|f1f7d91884c8e3c9ea300e67f5df91057094de40
+vendor_A14/lib64/vendor.display.color@1.1.so|e7ab973147c3e03e31efacee13e8d8a9c841eb7b
+vendor_A14/lib64/vendor.display.color@1.2.so|fe9ec904459b7675297e5ef6883ae98b438fb77f
+vendor_A14/lib64/vendor.display.color@1.3.so|32c721417938e870d34170c08c93c817e7d4447b
+vendor_A14/lib64/vendor.display.color@1.4.so|ff2233791d4e2c5c0da0f194546c42fc0eb68164
+vendor_A14/lib64/vendor.display.color@1.5.so|de239337ad42863e5eabeff196b20345d0dce00c
+vendor_A14/lib64/vendor.display.postproc@1.0.so|e94ad60150b7b6b1c09133c03341044a32cdfde7
+vendor_A14/lib64/libsdedrm.so|3283d483aa41433b887e572f381984f43b6c78eb
+vendor_A14/lib64/libdisp-aba.so|894b0fe1ace5effb471ebb7437cd590a096e47d8
+vendor_A14/lib64/libdpps.so|02538edc4f214b3d6018031aa8460efbc1760223
+vendor_A14/lib64/libdisplayqos.so|15701f18257c43be5657bbd867a8acf1f469e373
+vendor_A14/lib64/libdisplayskuutils.so|ac4f2231f098c03824844799106685bf81f97782
+vendor_A14/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
+vendor_A14/lib64/libqseed3.so|c9fb729cf48278d0c87d27c0af17ae3a8ccb1bf7
+vendor_A14/lib64/libsdm-disp-vndapis.so|2f1abd975b1f1dbabcc410e56c29ac296adcc411
+vendor_A14/lib64/libtinyxml2_1.so|fb0a2b16e5cfd28515268edc5c2345190d1ef4e5
 vendor_A14/lib/libadreno_utils.so|308eadb89ac484506b29e079e6640a179b641168
 vendor_A14/lib64/libadreno_utils.so|77bd49be2a006d55a4623b52ec5d2ede8379d9d9
 vendor_A14/lib/libC2D2.so|c1916f2adb917f3567b872670496994456472586
