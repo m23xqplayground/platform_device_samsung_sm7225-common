@@ -74,11 +74,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl.samsung-sm7225 \
-    android.hardware.audio.sounddose-vendor-impl \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl \
-    sound_trigger.primary.lito \
     audio.r_submix.default \
     audio.usb.default \
     libtinycompress \
