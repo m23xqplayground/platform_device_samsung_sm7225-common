@@ -79,7 +79,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.3-impl \
     sound_trigger.primary.lito \
     audio.r_submix.default \
-    audio.usb.default \
+    audio.usbv2.default \
     libtinycompress \
     libqcomvisualizer \
     libqcomvoiceprocessing \
