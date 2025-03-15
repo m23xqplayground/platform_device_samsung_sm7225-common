@@ -98,6 +98,9 @@ BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 KERNEL_CC := CC=clang
 override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
 
+# Enable LZ4 compression for ramdisks
+BOARD_RAMDISK_USE_LZ4 
+
 # Additional root folders
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
