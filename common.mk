@@ -80,6 +80,7 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.lito \
     audio.r_submix.default \
     audio.usb.default \
+    libtinycompress \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
