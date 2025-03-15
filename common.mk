@@ -75,6 +75,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.service \
     android.hardware.audio@7.0-impl.samsung-sm7225 \
     android.hardware.audio.effect@7.0-impl \
+    android.hardware.soundtrigger@2.2-impl \
     android.hardware.soundtrigger@2.3-impl \
     sound_trigger.primary.lito \
     audio.r_submix.default \
@@ -94,11 +95,16 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
-# Dolby Audio
-PRODUCT_PACKAGES += \
-    SamsungDAP
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
+    frameworks/native/data/etc/android.hardware.audio.pro.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.pro.xml \
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
-TARGET_EXCLUDES_AUDIOFX := true
+# Dolby Audio
+# PRODUCT_PACKAGES += \
+#    SamsungDAP
+
+# TARGET_EXCLUDES_AUDIOFX := true
 
 # Bluetooth
 PRODUCT_PACKAGES += \
