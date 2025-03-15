@@ -83,7 +83,10 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
-    libvolumelistener
+    libvolumelistener \
+    SamsungDAP
+ 
+ TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(COMMON_PATH)/audio/configs/,$(TARGET_COPY_OUT_VENDOR)/etc)
