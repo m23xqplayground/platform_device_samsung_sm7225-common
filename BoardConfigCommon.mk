@@ -99,7 +99,7 @@ KERNEL_CC := CC=clang
 override KERNEL_TOOLCHAIN_PREFIX_arm := arm-linux-android-
 
 # Enable LZ4 compression for ramdisks
-BOARD_RAMDISK_USE_LZ4 
+BOARD_RAMDISK_USE_LZ4 := true
 
 # Additional root folders
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
