@@ -83,6 +83,7 @@ vendor/lib/libcirrusspkrprot.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libdrc.so
 vendor/lib/libspkrprot.so
+vendor/lib/hw/audio.primary.lito.so
 
 # Audio (Soundtrigger)
 vendor/lib/libaudio_soundtrigger.so
@@ -226,6 +227,11 @@ vendor/lib/libarcsoft_multi_frame_video_hdr.so
 vendor/lib/libarcsoft_object_tracking.so
 vendor/lib/libcamera2ndk_vendor.so
 vendor/lib/libcamerapostproc.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-impl.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libcamxifestriping.so
 vendor/lib/libmultiobject_tracker.so
@@ -1075,6 +1081,7 @@ vendor/lib64/libdsi_netctrl.so
 vendor/lib/libqcmaputils.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libengmode_client.so
+vendor/lib64/libengmode_server.so
 vendor/bin/emservice
 vendor/etc/init/emservice.rc
 vendor/bin/pm_proxy_helper
