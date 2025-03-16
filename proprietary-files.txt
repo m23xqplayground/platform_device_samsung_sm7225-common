@@ -658,7 +658,6 @@ vendor/lib/libwvhidl.so|ea3d1828e4a02e477359ec1f75e5ed220c6d44c694ebb21bc8d0ac8e
 vendor/lib/mediadrm/libwvdrmengine.so|93700e1002bf9abbf2e0594471e0efb7144317989d73d787c165c507c2caaaa2
 
 # Feature
-vendor/lib/libsemnativecarrierfeature.so
 vendor/lib64/libsemnativecarrierfeature.so
 vendor/lib/libfloatingfeature.so
 vendor/lib64/libfloatingfeature.so
@@ -1074,10 +1073,7 @@ vendor/etc/plmn_se13.bin
 vendor/etc/mtu-conf.xml
 vendor/lib/libconfigdb.so
 vendor/lib64/libconfigdb.so
-vendor/lib/libdsi_netctrl.so
 vendor/lib64/libdsi_netctrl.so
-vendor/lib/libnetmgr.so|72f9fb23851dd6ffe6ac0aabfce5081d69f1839a
-vendor/lib/libnetmgr_common.so|b7987fd703db7688086b10c612e910e445db65a6
 vendor/lib64/libnetmgr.so|527afad81de5394679e6ef4c46e7faf4d03e5419
 vendor/lib64/libnetmgr_common.so|9ffa3e00702aa3db43908cf44af70fb438aa5bd5
 vendor/lib/libqcmaputils.so
