@@ -520,8 +520,6 @@
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
-        <fqname>@2.2::ISehRadio/slot1</fqname>
-        <fqname>@2.2::ISehRadio/slot2</fqname>
     </hal>
     <hal format="aidl">
         <name>vendor.samsung.hardware.radio.channel</name>
