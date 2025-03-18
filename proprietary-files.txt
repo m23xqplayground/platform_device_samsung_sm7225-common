@@ -1,4 +1,4 @@
-# All blobs are from M236BXXS9EXK5, unless pinned
+# All blobs are from M236BXXS9EYB2, unless pinned
 
 # ACDB
 vendor/lib/libacdb-fts.so
@@ -227,11 +227,6 @@ vendor/lib/libarcsoft_multi_frame_video_hdr.so
 vendor/lib/libarcsoft_object_tracking.so
 vendor/lib/libcamera2ndk_vendor.so
 vendor/lib/libcamerapostproc.so
-vendor/lib64/camera.device@1.0-impl.so
-vendor/lib64/camera.device@3.2-impl.so
-vendor/lib64/camera.device@3.3-impl.so
-vendor/lib64/camera.device@3.4-impl.so
-vendor/lib64/camera.device@3.5-impl.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libcamxifestriping.so
 vendor/lib/libmultiobject_tracker.so
@@ -1082,7 +1077,6 @@ vendor/lib/libqcmaputils.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libengmode_client.so
 vendor/lib64/libengmode_server.so
-vendor/bin/emservice
 vendor/etc/init/emservice.rc
 vendor/bin/pm_proxy_helper
 vendor/etc/init/pm_proxy_helper.rc
