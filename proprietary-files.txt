@@ -553,8 +553,8 @@ vendor/lib/libcamxfacialfeatures.so
 vendor/lib64/libcamxfacialfeatures.so
 
 # Camera (OOT)
-vendor/lib/android.hardware.camera.provider@2.4-legacy.so|8ba57251a8f21990fcb94278ffac376c433f124c
-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so|d1d56a731570988d744ca55a6d175cc7627eaaa3
+vendor/lib/android.hardware.camera.provider@2.4-legacy.so
+vendor/lib64/android.hardware.camera.provider@2.4-legacy.so
 
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
@@ -785,8 +785,8 @@ vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl-sec.so
 vendor/lib/vendor.samsung.hardware.gnss@2.0.so
 vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
-# GPS (from sm7325-common)
-vendor/bin/hw/android.hardware.gnss@2.1-service-qti|e9824db34d8fa8479724c14352d0f6a13ee78e26
+# GPS
+vendor/bin/hw/android.hardware.gnss@2.1-service-qti
 
 # Graphics
 vendor/lib64/vendor.display.config@1.0.so
