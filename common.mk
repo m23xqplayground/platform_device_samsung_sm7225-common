@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     fstab.ramplus \
     init.qcom.rc \
     init.qcom.usb.rc \
+    init.qti.qcv.rc \
     init.samsung.bsp.rc \
     init.samsung.display.rc \
     init.samsung.rc \
@@ -68,7 +69,8 @@ PRODUCT_PACKAGES += \
     init.qti.chg_policy.sh \
     init.qti.dcvs.sh \
     init.qti.early_init.sh \
-    init.qti.media.sh
+    init.qti.media.sh \
+    init.qti.qcv.sh
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -453,7 +455,12 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
     
+# Fix ADB
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.control_privapp_permissions=log
+    
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=log \
     ro.secure=0 \
     ro.debuggable=1 \
     ro.adb.secure=0 \
