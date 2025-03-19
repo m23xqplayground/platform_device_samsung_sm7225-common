@@ -231,8 +231,14 @@ PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
 # Media
+PRODUCT_PACKAGES += \
+     android.hardware.media.c2@1.2.vendor \
+     libcodec2_hidl@1.0.vendor \
+     libcodec2_vndk.vendor \
+     libstagefright_bufferpool@2.0.1.vendor
+
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(COMMON_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
+     $(call find-copy-subdir-files,*,$(COMMON_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Minijail
 PRODUCT_PACKAGES += \
