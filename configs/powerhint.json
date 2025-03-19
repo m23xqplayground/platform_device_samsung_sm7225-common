@@ -151,24 +151,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "L3LittleClusterMinFreq",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu0-cpu-l3-lat/min_freq",
-      "Values": [
-        "1459200000",
-        "300000000"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "L3BigClusterMinFreq",
-      "Path": "/sys/class/devfreq/soc:qcom,cpu6-cpu-l3-lat/min_freq",
-      "Values": [
-        "1459200000",
-        "300000000"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -310,18 +292,6 @@
       "Node": "LLCCBWMinFreq",
       "Duration": 5000,
       "Value": "6881"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "L3LittleClusterMinFreq",
-      "Duration": 5000,
-      "Value": "1459200000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "L3BigClusterMinFreq",
-      "Duration": 5000,
-      "Value": "1459200000"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
