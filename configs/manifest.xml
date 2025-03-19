@@ -193,85 +193,30 @@
         </interface>
         <fqname>@4.0::IKeymasterDevice/default</fqname>
     </hal>
-    <hal override="true" format="hidl">
-         <name>android.hardware.radio.deprecated</name>
-         <transport>hwbinder</transport>
-     </hal>
-     <hal override="true" format="hidl">
-         <name>android.hardware.radio</name>
-         <transport>hwbinder</transport>
-     </hal>
-     <hal override="true" format="hidl">
+    <hal format="hidl" override="true">
+        <name>android.hardware.radio</name>
+        <transport>hwbinder</transport>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.radio</name>
         <transport>hwbinder</transport>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
+        <fqname>@1.5::IRadio/slot1</fqname>
+        <fqname>@1.5::IRadio/slot2</fqname>
     </hal>
-    <hal override="true" format="hidl">
+    <hal format="hidl">
         <name>android.hardware.radio.config</name>
         <transport>hwbinder</transport>
-    </hal>
-    <hal override="true" format="aidl">
-        <name>android.hardware.radio.config</name>
-        <version>1</version>
+        <version>1.1</version>
         <interface>
             <name>IRadioConfig</name>
             <instance>default</instance>
         </interface>
     </hal>
-    <hal override="true" format="aidl">
-         <name>android.hardware.radio.data</name>
-         <version>1</version>
-         <interface>
-             <name>IRadioData</name>
-             <instance>slot1</instance>
-             <instance>slot2</instance>
-         </interface>
-    </hal>
-    <hal override="true" format="aidl">
-        <name>android.hardware.radio.messaging</name>
-        <version>1</version>
-        <interface>
-            <name>IRadioMessaging</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal override="true" format="aidl">
-        <name>android.hardware.radio.modem</name>
-        <version>1</version>
-        <interface>
-            <name>IRadioModem</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal override="true" format="aidl">
-        <name>android.hardware.radio.network</name>
-        <version>1</version>
-        <interface>
-            <name>IRadioNetwork</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal override="true" format="aidl">
-        <name>android.hardware.radio.sim</name>
-        <version>1</version>
-        <interface>
-            <name>IRadioSim</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal override="true" format="aidl">
-        <name>android.hardware.radio.voice</name>
-        <version>1</version>
-        <interface>
-            <name>IRadioVoice</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
+    <hal format="hidl" override="true">
+        <name>android.hardware.radio.deprecated</name>
+        <transport>hwbinder</transport>
     </hal>
     <hal format="hidl">
         <name>android.hardware.soundtrigger</name>
@@ -512,60 +457,38 @@
         </interface>
         <fqname>@2.0::ISehBluetooth/default</fqname>
     </hal>
-    <hal format="aidl">
+    <hal format="hidl">
+       <name>vendor.samsung.hardware.radio</name>
+       <transport>hwbinder</transport>
+       <version>2.2</version>
+       <interface>
+           <name>ISehRadio</name>
+           <instance>slot1</instance>
+           <instance>slot2</instance>
+       </interface>
+       <fqname>@2.2::ISehRadio/slot1</fqname>
+       <fqname>@2.2::ISehRadio/slot2</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.samsung.hardware.radio.bridge</name>
-        <version>1</version>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
         <interface>
-            <name>ISehRadioBridge</name>
+            <name>ISehBridge</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
         </interface>
     </hal>
-    <hal format="aidl">
+    <hal format="hidl">
         <name>vendor.samsung.hardware.radio.channel</name>
-        <version>1</version>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
         <interface>
-            <name>ISehRadioChannel</name>
+            <name>ISehChannel</name>
             <instance>imsd</instance>
             <instance>imsd2</instance>
             <instance>epdgd</instance>
             <instance>epdgd2</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.samsung.hardware.radio.data</name>
-        <version>1</version>
-        <interface>
-            <name>ISehRadioData</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.samsung.hardware.radio.messaging</name>
-        <version>1</version>
-        <interface>
-            <name>ISehRadioMessaging</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.samsung.hardware.radio.network</name>
-        <version>1</version>
-        <interface>
-            <name>ISehRadioNetwork</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.samsung.hardware.radio.sim</name>
-        <version>1</version>
-        <interface>
-            <name>ISehRadioSim</name>
-            <instance>slot1</instance>
-            <instance>slot2</instance>
         </interface>
     </hal>
     <hal format="hidl">
