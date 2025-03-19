@@ -1080,8 +1080,6 @@ vendor/lib64/libengmode_server.so
 vendor/etc/init/emservice.rc
 vendor/bin/pm_proxy_helper
 vendor/etc/init/pm_proxy_helper.rc
-vendor/bin/ssgtzd
-vendor/etc/init/ssgtzd.rc
 vendor/etc/init/dataadpl.rc
 vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/vendor.qti.tftp.rc
