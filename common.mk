@@ -149,7 +149,8 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.memtrack-service \
-    libsdmcore
+    libsdmcore \
+    libsdedrm
 
 # Doze
 PRODUCT_PACKAGES += \
