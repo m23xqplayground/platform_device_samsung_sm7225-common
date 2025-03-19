@@ -190,7 +190,6 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    libcurl \
     android.hardware.gnss@2.1.vendor
 
 # Graphics
