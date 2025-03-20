@@ -1066,6 +1066,7 @@ vendor/lib/libqdp.so
 vendor/lib64/libqdp.so
 
 # RIL
+vendor/bin/netmgrd
 vendor/bin/hw/rild
 vendor/bin/adpl
 vendor/bin/ipacm-diag
@@ -1128,7 +1129,6 @@ vendor/lib64/libqcmaputils.so
 vendor/lib64/libengmode_client.so
 
 # RIL (From A52)
-vendor/bin/netmgrd|6871b8c8ceb075ee710654fc2e11eff8e0eef2e1
 vendor/lib64/libsec-ril-dsds.so|bf3d12e806e343082aa2842517b45415d5b70498
 vendor/lib64/liblqe.so|732f3a617a90c2c96b54fe80d0ab2a409b2cb82a
 vendor/lib/librilqmiservices-ext.so|aeefecff17a9e4f247da67f878667760535cfd8b
