@@ -204,6 +204,16 @@ vendor/firmware/crnv21.bin
 
 
 # Camera
+vendor/lib64/libvideobeauty_capture.uniplugin@1.0.so
+vendor/lib64/libsegmentationeffect_capture.uniplugin@1.0.so
+vendor/lib64/libheifcapture.so
+vendor/lib64/libdualcam_refocus_video.so
+vendor/lib64/libEventFinder.camera.samsung.so
+vendor/lib/libvideobeauty_capture.uniplugin@1.0.so
+vendor/lib/libsegmentationeffect_capture.uniplugin@1.0.so
+vendor/lib/libheifcapture.so
+vendor/lib/libEventFinder.camera.samsung.so
+vendor/lib/libLocalTM_wrapper.camera.samsung.so
 vendor/lib/libipebpsstriping.so
 vendor/lib64/libipebpsstriping.so
 vendor/etc/init/camera.unihal.rc
@@ -1022,6 +1032,7 @@ vendor/etc/public.libraries.txt
 vendor/bin/pd-mapper
 vendor/bin/ssr_setup
 vendor/bin/irsc_util
+vendor/bin/qrtr-cfg
 vendor/bin/qrtr-ns
 vendor/lib/libdiag.so
 vendor/lib/libdiagjni.so
@@ -1069,10 +1080,15 @@ vendor/lib64/libqdp.so
 vendor/bin/netmgrd
 vendor/bin/hw/rild
 vendor/bin/adpl
+vendor/bin/shsusrd
+vendor/bin/ssgtzd
 vendor/bin/ipacm-diag
 vendor/bin/tftp_server
+vendor/bin/ks
 vendor/bin/rmt_storage
 vendor/etc/init/netmgrd.rc
+vendor/etc/init/shsusrd.rc
+vendor/etc/init/ssgtzd.rc
 vendor/etc/data/dsi_config.xml
 vendor/etc/data/netmgr_config.xml
 vendor/etc/locale/plmn_delta_eng.bin
