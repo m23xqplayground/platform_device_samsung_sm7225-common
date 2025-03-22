@@ -96,6 +96,8 @@ bluetooth.profile.sap.server.enabled?=true
 # Camera
 camera.disable_zsl_mode=1
 ro.camera.notify_nfc=1
+ro.camera.disableJpegR=true
+ro.slmk.use_camera_boost=true
 
 # Chipset
 ro.soc.manufacturer=Qualcomm
@@ -194,7 +196,6 @@ ro.vendor.nfc.support.defaultaid=true
 ro.vendor.nfc.support.nonaid=true
 ro.vendor.nfc.support.othercategory=true
 ro.vendor.nfc.support.uicc=true
-ro.camera.notify_nfc=1
 ro.vendor.nfc.support.ese=false
 ro.vendor.nfc.info.antpos=16
 
@@ -212,11 +213,12 @@ vendor.powerhal.disp.idle_support=false
 
 # RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
+vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 ro.vendor.sec.radio.def_network=9
 persist.vendor.radio.enableadvancedscan=true
 ro.telephony.default_cdma_sub=0
-ro.telephony.default_network=33,22
 persist.vendor.radio.atfwd.start=true
+ro.vendor.use_data_netmgrd=false
 ro.radio.noril=no
 ro.vendor.epdg.support=true
 
