@@ -204,18 +204,15 @@ vendor/firmware/crnv21.bin
 
 
 # Camera
-vendor/lib64/libvideobeauty_capture.uniplugin@1.0.so
-vendor/lib64/libsegmentationeffect_capture.uniplugin@1.0.so
-vendor/lib64/libheifcapture.so
 vendor/lib64/libdualcam_refocus_video.so
 vendor/lib64/libEventFinder.camera.samsung.so
-vendor/lib/libvideobeauty_capture.uniplugin@1.0.so
-vendor/lib/libsegmentationeffect_capture.uniplugin@1.0.so
 vendor/lib/libheifcapture.so
 vendor/lib/libEventFinder.camera.samsung.so
 vendor/lib/libLocalTM_wrapper.camera.samsung.so
 vendor/lib/libipebpsstriping.so
 vendor/lib64/libipebpsstriping.so
+vendor/lib64/libcamxncs.so
+vendor/lib64/libc++_shared.so
 vendor/etc/init/camera.unihal.rc
 vendor/lib/com.qti.feature2.anchorsync.so
 vendor/lib/com.qti.feature2.demux.so
@@ -489,6 +486,7 @@ vendor/lib64/libsegmentationeffect.uniplugin@1.0.so
 vendor/lib64/libLocalTM_wrapper.camera.samsung.so
 vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libBeauty_v4.camera.samsung.so
+vendor/lib64/libsavscmn.so
 vendor/lib64/libhypermotion_core.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libvideobeauty_interface.so
