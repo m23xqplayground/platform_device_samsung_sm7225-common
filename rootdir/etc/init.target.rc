@@ -50,6 +50,32 @@ on init
     start vendor.qseecomd
     start keymaster-4-0
 
+    # Create a cpu group for camera daemon processes
+    mkdir /dev/cpuctl/camera-daemon
+    chown system system /dev/cpuctl/camera-daemon
+    chown system system /dev/cpuctl/camera-daemon/tasks
+    chown system system /dev/cpuctl/camera-daemon/cgroup.procs
+    chmod 0664 /dev/cpuctl/camera-daemon/tasks
+    chmod 0664 /dev/cpuctl/camera-daemon/cgroup.procs
+
+    # Create an stune group for camera-specific processes
+    mkdir /dev/stune/camera-daemon
+    chown system system /dev/stune/camera-daemon
+    chown system system /dev/stune/camera-daemon/tasks
+    chown system system /dev/stune/camera-daemon/cgroup.procs
+    chmod 0664 /dev/stune/camera-daemon/tasks
+    chmod 0664 /dev/stune/camera-daemon/cgroup.procs
+
+    # create a cpuset for camera daemon processes
+    mkdir /dev/cpuset/camera-daemon
+    copy /dev/cpuset/cpus /dev/cpuset/camera-daemon/cpus
+    copy /dev/cpuset/mems /dev/cpuset/camera-daemon/mems
+    chown system system /dev/cpuset/camera-daemon
+    chown system system /dev/cpuset/camera-daemon/tasks
+    chown system system /dev/cpuset/camera-daemon/cgroup.procs
+    chmod 0664 /dev/cpuset/camera-daemon/tasks
+    chmod 0664 /dev/cpuset/camera-daemon/cgroup.procs
+
 # GPIS HINT (SM7225)
     mkdir /dev/cpuset/sf
     copy /dev/cpuset/cpus /dev/cpuset/sf/cpus
@@ -109,6 +135,8 @@ on late-fs
 on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
 
+    mkdir /data/misc/cameraserver 0700 cameraserver cameraserver
+
 on early-boot
     start vendor.sensors
 
@@ -130,6 +158,14 @@ on boot
     write /dev/cpuset/foreground/cpus 0-4,6-7
     write /dev/cpuset/background/cpus 0-3
     write /dev/cpuset/system-background/cpus 0-3
+
+    # mem_boost_mode:Camera
+    chmod 0664 /sys/kernel/mm/vmscan/mem_boost_mode
+    chown cameraserver cameraserver /sys/kernel/mm/vmscan/mem_boost_mode
+
+    # mem_boost_mode:Camera
+    chmod 0664 /sys/kernel/rbin/mem_boost_mode
+    chown cameraserver cameraserver /sys/kernel/rbin/mem_boost_mode
 
 #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
