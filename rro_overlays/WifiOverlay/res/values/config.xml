@@ -18,7 +18,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Default access point SSID used for tethering -->
-    <string name="wifi_tether_configure_ssid_default" translatable="false">Galaxy M23 5G</string>
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Samsung Galaxy M23 5G</string>
 
     <!-- Set to true if the wifi display supports compositing content stored
          in gralloc protected buffers.  For this to be true, there must exist
