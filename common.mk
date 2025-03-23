@@ -113,8 +113,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-legacy.samsung \
-    android.hardware.camera.provider@2.5-service_64.samsung \
+    android.hardware.camera.provider-service.samsung \
+    vendor.qti.hardware.camera.device@1.0.vendor \
+    libui_shim.vendor \
+    libutilscallstack.vendor \
     libgrallocusage.vendor
 
 $(call soong_config_set,samsungCameraVars,needs_sec_reserved_field,true)
@@ -362,15 +364,11 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    libxml2 \
-    librilutils \
-    librmnetctl \
     secril_config_svc \
-    sehradiomanager \
-    libjsoncpp.vendor
+    sehradiomanager
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
 
 # Sensors
 PRODUCT_PACKAGES += \
