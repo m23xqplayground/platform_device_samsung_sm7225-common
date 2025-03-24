@@ -139,6 +139,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.memtrack-service \
+    gralloc.qcom \
     libsdmcore \
     libsdedrm
 
