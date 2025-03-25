@@ -213,7 +213,6 @@ vendor.powerhal.disp.idle_support=false
 
 # RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
-vendor.rild.libpath=/vendor/lib64/libsec-ril.so
 ro.vendor.sec.radio.def_network=9
 persist.vendor.radio.enableadvancedscan=true
 ro.telephony.default_cdma_sub=0
