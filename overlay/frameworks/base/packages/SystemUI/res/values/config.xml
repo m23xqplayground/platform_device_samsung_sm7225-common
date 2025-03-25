@@ -37,9 +37,11 @@
 
     <dimen name="status_bar_header_height_keyguard">40dp</dimen>
 
-    <dimen name="status_bar_height_portrait">24.0dip</dimen>
+    <dimen name="status_bar_height_portrait">4.4299927mm</dimen>
 
     <dimen name="status_bar_height">24.0dip</dimen>
 
     <dimen name="status_bar_height_landscape">24.0dip</dimen>
+
+    <dimen name="status_bar_indicator_corner_padding">64.0px</dimen>
 </resources>
