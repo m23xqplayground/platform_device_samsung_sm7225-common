@@ -340,6 +340,7 @@ PRODUCT_COPY_FILES += \
 # QCOM
 PRODUCT_PACKAGES += \
     libjson \
+    libprotobuf-cpp-lite-3.9.1-vendorcompat \
     libsqlite.vendor
 
 # QTI fwk-detect
@@ -361,20 +362,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.config-V1-ndk.vendor:64 \
-    android.hardware.radio.data-V1-ndk.vendor:64 \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.radio.messaging-V1-ndk.vendor:64 \
-    android.hardware.radio.modem-V1-ndk.vendor:64 \
-    android.hardware.radio.network-V1-ndk.vendor:64 \
-    android.hardware.radio.sim-V1-ndk.vendor:64 \
-    android.hardware.radio.voice-V1-ndk.vendor:64 \
-    android.hardware.secure_element@1.0.vendor \
-    libnetutils.vendor \
-    librilutils \
     libxml2 \
+    librilutils \
+    librmnetctl \
     secril_config_svc \
-    sehradiomanager
+    sehradiomanager \
+    libjsoncpp.vendor
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -382,7 +376,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
     android.frameworks.sensorservice@1.0.vendor \
     sensors.samsung \
-    libsensorndkbridge
+    libsensorndkbridge \
     
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
