@@ -185,9 +185,6 @@ ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true
 ro.security.keystore.keytype=sakv2,gak
 
-# Logs
-persist.log.tag.OpenGLRenderer=S
-
 # Network manager
 ro.telephony.iwlan_operation_mode=legacy
 persist.vendor.data.iwlan.enable=true
