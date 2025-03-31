@@ -86,6 +86,10 @@ on init
     write /sys/class/sec/tsp/enabled 1,0
     write /sys/class/sec/tsp/enabled 2,1
 
+    # Send Proximity fix
+    write /sys/class/sec/tsp/cmd ear_detect_enable,1
+    write /sys/class/sec/tsp/cmd prox_power_off,0
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
