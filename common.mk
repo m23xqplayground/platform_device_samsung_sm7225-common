@@ -218,8 +218,7 @@ PRODUCT_PACKAGES += \
 
 # Light
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.samsung \
-    lights.qcom
+    android.hardware.light-service.samsung
 
 # Lineage Health
 PRODUCT_PACKAGES += \
