@@ -185,6 +185,9 @@ ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true
 ro.security.keystore.keytype=sakv2,gak
 
+# Light
+ro.hardware.lights=qcom
+
 # Network manager
 ro.telephony.iwlan_operation_mode=legacy
 persist.vendor.data.iwlan.enable=true
