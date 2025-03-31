@@ -1,5 +1,8 @@
 init_daemon_domain(system_suspend)
 
+allow system_suspend sysfs:dir { open  read };
+allow system_suspend sysfs:file { read };
+
 # To serve ISuspendControlService.aidl.
 binder_use(system_suspend)
 add_service(system_suspend, system_suspend_control_service)
