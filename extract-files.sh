@@ -74,10 +74,7 @@ function blob_fixup() {
         vendor/lib64/libsec-ril.so)
 	    [ "$2" = "" ] && return 0
             # Replace SlotID prop
-            sed -i 's/ril.dds.call.ongoing/vendor.calls.slot_id/g' "${2}"
-            # Pass an empty value to SecRil::RequestComplete in OnGetSmscAddressDone (mov x3,x20 -> mov,x3,#0x0)
-            xxd -p -c0 "${2}" | sed "s/600e40f9820c805224008052e10315aa080040f9e30314aa/600e40f9820c805224008052e10315aa080040f9030080d2/g" | xxd -r -p > "${2}".patched
-            mv "${2}".patched "${2}"
+            sed -i 's/ril.dds.call.ongoing/vendor.calls.ongoing/g' "${2}"
             ;;
 	vendor/lib64/hw/gatekeeper.mdfpp.so|vendor/lib64/libskeymaster4device.so|vendor/lib64/libkeymaster_helper.so)
 	    [ "$2" = "" ] && return 0
