@@ -1142,12 +1142,6 @@ vendor/lib/libqcmaputils.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libengmode_client.so
 
-# RIL (From A52)
-vendor/lib64/libsec-ril-dsds.so|bf3d12e806e343082aa2842517b45415d5b70498
-vendor/lib64/liblqe.so|732f3a617a90c2c96b54fe80d0ab2a409b2cb82a
-vendor/lib/librilqmiservices-ext.so|aeefecff17a9e4f247da67f878667760535cfd8b
-vendor/lib64/librilqmiservices-ext.so|a020dafb8d1932ab90bbcfe362afb93dc74d010d
-
 # Sensors
 vendor/bin/factory.ssc
 vendor/bin/sscrpcd
@@ -1208,7 +1202,7 @@ vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
-vendor/lib64/libsec-ril.so|5831099132867816e6e56ac5e858084843009e69
+vendor/lib64/libsec-ril.so|b603ef319f45dd4bfb29ec1d7d660f04fb65f314
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/libsns_low_lat_stream_stub.so
