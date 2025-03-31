@@ -1,4 +1,0 @@
-allow init hal_system_suspend_service:service_manager { find };
-allow init init:qipcrtr_socket { create  read };
-allow init nfc:binder { call };
-allow init system_server:binder { call };
