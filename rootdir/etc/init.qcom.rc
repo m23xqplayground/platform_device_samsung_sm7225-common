@@ -86,10 +86,6 @@ on init
     write /sys/class/sec/tsp/enabled 1,0
     write /sys/class/sec/tsp/enabled 2,1
 
-    # Send Proximity fix
-    write /sys/class/sec/tsp/cmd ear_detect_enable,1
-    write /sys/class/sec/tsp/cmd prox_power_off,0
-
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
@@ -453,6 +449,10 @@ on post-fs-data
 
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
+
+    # Send Proximity fix
+    write /sys/class/sec/tsp/cmd ear_detect_enable,1
+    write /sys/class/sec/tsp/cmd prox_power_off,0
 
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
