@@ -1,2 +1,0 @@
-allow hal_thermal_default sysfs_battery:dir search;
-allow hal_thermal_default sysfs_battery:file { getattr open read };

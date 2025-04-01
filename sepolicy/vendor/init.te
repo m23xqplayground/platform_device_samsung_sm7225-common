@@ -25,16 +25,6 @@ allow init {
 # rild (00564E445F4D756C7469636C69656E74)
 allow init rild:unix_stream_socket { connectto };
 
-allow init default_android_hwservice:hwservice_manager { add find };
-allow init hal_nfc_hwservice:hwservice_manager { add find };
-allow init hal_system_suspend_service:service_manager find;
-allow init hidl_base_hwservice:hwservice_manager add;
-allow init nfc:binder call;
-allow init self:qipcrtr_socket { create getattr read setopt write };
-allow init sysfs_touchscreen_writable:file open;
-allow init system_server:binder call;
-allow init vendor_file:file { execute execute_no_trans };
-
 # android.hardwar
 allow init hwservicemanager:binder { call };
 
