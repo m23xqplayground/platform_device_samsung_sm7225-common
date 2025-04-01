@@ -33,10 +33,7 @@
     -->
     <integer name="config_vibration_supported_intensity_levels">3</integer>
 
-    <bool name="config_show_min_refresh_rate_switch">true</bool>
-
     <!-- Whether to show Smooth Display feature in Settings Options -->
     <bool name="config_show_smooth_display">true</bool>
 
-    <integer name="config_network_scan_helper_max_search_time_sec">300</integer>
 </resources>
