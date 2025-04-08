@@ -450,10 +450,6 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-    # Send Proximity fix
-    write /sys/class/sec/tsp/cmd ear_detect_enable,1
-    write /sys/class/sec/tsp/cmd prox_power_off,0
-
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
