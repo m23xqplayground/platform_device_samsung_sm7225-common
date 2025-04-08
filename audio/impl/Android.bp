@@ -1,5 +1,5 @@
 filegroup {
-    name: "android.hardware.audio-impl_samsung-sm7225_srcs",
+    name: "android.hardware.audio-impl_samsung-sm8250_srcs",
     srcs: [
         "Device.cpp",
         "DevicesFactory.cpp",
@@ -12,18 +12,18 @@ filegroup {
 }
 
 cc_library_headers {
-    name: "android.hardware.audio-impl_samsung-sm7225_headers",
+    name: "android.hardware.audio-impl_samsung-sm8250_headers",
     proprietary: true,
     vendor: true,
     export_include_dirs: ["include"],
 }
 
 cc_defaults {
-    name: "android.hardware.audio-impl_samsung-sm7225",
+    name: "android.hardware.audio-impl_samsung-sm8250",
     relative_install_path: "hw",
     proprietary: true,
     vendor: true,
-    srcs: [":android.hardware.audio-impl_samsung-sm7225_srcs"],
+    srcs: [":android.hardware.audio-impl_samsung-sm8250_srcs"],
 
     defaults: ["hidl_defaults"],
 
@@ -41,13 +41,13 @@ cc_defaults {
         "libmedia_helper",
         "libmediautils_vendor",
         "libmemunreachable",
+        "libtinyalsa",
         "libutils",
         "android.hardware.audio.common-util",
-        "libtinyalsa",
     ],
 
     header_libs: [
-        "android.hardware.audio-impl_samsung-sm7225_headers",
+        "android.hardware.audio-impl_samsung-sm8250_headers",
         "android.hardware.audio.common.util@all-versions",
         "libaudioutils_headers",
         "libaudio_system_headers",
@@ -57,20 +57,19 @@ cc_defaults {
     ],
 
     export_header_lib_headers: [
-        "android.hardware.audio-impl_samsung-sm7225_headers",
+        "android.hardware.audio-impl_samsung-sm8250_headers",
     ],
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@2.0-impl.samsung-sm7225",
-    defaults: ["android.hardware.audio-impl_samsung-sm7225"],
+    name: "android.hardware.audio@2.0-impl.samsung-sm8250",
+    defaults: ["android.hardware.audio-impl_samsung-sm8250"],
     shared_libs: [
         "android.hardware.audio@2.0",
         "android.hardware.audio@2.0-util",
         "android.hardware.audio.common@2.0",
         "android.hardware.audio.common@2.0-util",
         "libcutils",
-        "libtinyalsa",
     ],
     cflags: [
         "-DMAJOR_VERSION=2",
@@ -80,8 +79,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@4.0-impl.samsung-sm7225",
-    defaults: ["android.hardware.audio-impl_samsung-sm7225"],
+    name: "android.hardware.audio@4.0-impl.samsung-sm8250",
+    defaults: ["android.hardware.audio-impl_samsung-sm8250"],
 
     shared_libs: [
         "android.hardware.audio@4.0",
@@ -89,7 +88,6 @@ cc_library_shared {
         "android.hardware.audio.common@4.0",
         "android.hardware.audio.common@4.0-util",
         "libcutils",
-        "libtinyalsa",
     ],
     cflags: [
         "-DMAJOR_VERSION=4",
@@ -99,15 +97,14 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@5.0-impl.samsung-sm7225",
-    defaults: ["android.hardware.audio-impl_samsung-sm7225"],
+    name: "android.hardware.audio@5.0-impl.samsung-sm8250",
+    defaults: ["android.hardware.audio-impl_samsung-sm8250"],
     shared_libs: [
         "android.hardware.audio@5.0",
         "android.hardware.audio@5.0-util",
         "android.hardware.audio.common@5.0",
         "android.hardware.audio.common@5.0-util",
         "libcutils",
-        "libtinyalsa",
     ],
     cflags: [
         "-DMAJOR_VERSION=5",
@@ -117,15 +114,14 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@6.0-impl.samsung-sm7225",
-    defaults: ["android.hardware.audio-impl_samsung-sm7225"],
+    name: "android.hardware.audio@6.0-impl.samsung-sm8250",
+    defaults: ["android.hardware.audio-impl_samsung-sm8250"],
     shared_libs: [
         "android.hardware.audio@6.0",
         "android.hardware.audio@6.0-util",
         "android.hardware.audio.common@6.0",
         "android.hardware.audio.common@6.0-util",
         "libcutils",
-        "libtinyalsa",
     ],
     cflags: [
         "-DMAJOR_VERSION=6",
@@ -135,8 +131,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@7.0-impl.samsung-sm7225",
-    defaults: ["android.hardware.audio-impl_samsung-sm7225"],
+    name: "android.hardware.audio@7.0-impl.samsung-sm8250",
+    defaults: ["android.hardware.audio-impl_samsung-sm8250"],
     shared_libs: [
         "android.hardware.audio@7.0",
         "android.hardware.audio@7.0-util",
@@ -145,7 +141,6 @@ cc_library_shared {
         "android.hardware.audio.common@7.0-util",
         "libbase",
         "libcutils",
-        "libtinyalsa",
     ],
     cflags: [
         "-DMAJOR_VERSION=7",
@@ -155,8 +150,8 @@ cc_library_shared {
 }
 
 cc_library_shared {
-    name: "android.hardware.audio@7.1-impl.sm7225",
-    defaults: ["android.hardware.audio-impl_samsung-sm7225"],
+    name: "android.hardware.audio@7.1-impl.samsung-sm8250",
+    defaults: ["android.hardware.audio-impl_samsung-sm8250"],
     shared_libs: [
         "android.hardware.audio@7.0",
         "android.hardware.audio@7.1",
@@ -166,7 +161,6 @@ cc_library_shared {
         "android.hardware.audio.common@7.1-util",
         "libbase",
         "libcutils",
-        "libtinyalsa",
     ],
     cflags: [
         "-DMAJOR_VERSION=7",
