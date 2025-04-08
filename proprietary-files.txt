@@ -1202,7 +1202,7 @@ vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
-vendor/lib64/libsec-ril.so|b603ef319f45dd4bfb29ec1d7d660f04fb65f314
+vendor/lib64/libsec-ril.so|5831099132867816e6e56ac5e858084843009e69
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/libsns_low_lat_stream_stub.so
