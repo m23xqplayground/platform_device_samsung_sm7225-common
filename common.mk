@@ -224,10 +224,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.samsung-qcom.sm7225
-
 # Media
 PRODUCT_PACKAGES += \
      android.hardware.media.c2@1.0.vendor \
