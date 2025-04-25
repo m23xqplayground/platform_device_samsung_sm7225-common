@@ -1129,6 +1129,7 @@ vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
 vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
 vendor/lib64/libipanat.so
 vendor/etc/qms_log_config
+vendor/lib64/libsec-ril.so|5831099132867816e6e56ac5e858084843009e69
 vendor/lib64/libsecril-client.so
 vendor/lib/libconfigdb.so
 vendor/lib64/libconfigdb.so
@@ -1202,7 +1203,6 @@ vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_fastRPC_util.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
-vendor/lib64/libsec-ril.so|5831099132867816e6e56ac5e858084843009e69
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/libsns_low_lat_stream_stub.so
