@@ -248,7 +248,13 @@ SPAMMY_LOG_TAGS_S  := \
     Telecom \
     DisplayManagerService \
     CompatChangeReporter \
-    FingerprintProvider
+    FingerprintProvider \
+    ContextImpl \
+    JobScheduler \
+    netio \
+    GRIP \
+    ForegroundUtils \
+    ConstraintSet
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 PRODUCT_VENDOR_PROPERTIES += \
