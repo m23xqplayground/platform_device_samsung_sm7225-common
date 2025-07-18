@@ -383,7 +383,7 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Touch features
 PRODUCT_PACKAGES += \
