@@ -305,9 +305,6 @@ vendor/lib/camera/components/com.samsung.node.uniplugin_vdis.so
 vendor/lib/camera/components/com.qti.hvx.binning.so
 vendor/lib/camera/com.qti.tuned.default.bin
 vendor/lib/camera/com.samsung.tuned.sony_imx355_front.bin
-vendor/lib64/camera/com.qti.tuned.default.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx355.bin
-vendor/lib64/camera/com.samsung.tuned.sony_imx355_front.bin
 vendor/lib64/camera/components/com.qti.hvx.addconstant.so
 vendor/lib64/camera/components/com.qti.hvx.binning.so
 vendor/lib64/camera/components/com.qti.stats.localhistogram.so
@@ -434,20 +431,12 @@ vendor/lib/libLocalTM_capture_core.camera.samsung.so
 vendor/lib/libvdis_core.so
 vendor/lib/unihal_uniplugin@1.0.so
 vendor/lib/libface_landmark.arcsoft.so
-vendor/lib64/camera/com.samsung.sensormodule.0_lsi_s5kjn1.bin
-vendor/lib64/camera/com.samsung.sensormodule.1_sony_imx355_front.bin
-vendor/lib64/camera/com.samsung.tuned.lsi_gc02m1.bin
-vendor/lib64/camera/com.samsung.sensormodule.2_sony_imx355.bin
 vendor/lib64/camera/com.samsung.sensor.gc02m1.so
 vendor/lib64/camera/com.samsung.sensor.imx355.so
 vendor/lib64/camera/com.samsung.sensor.imx355_front.so
 vendor/lib64/camera/com.samsung.sensor.s5kjn1.so
-vendor/lib64/camera/com.samsung.sensormodule.4_lsi_gc02m1_macro.bin
-vendor/lib64/camera/com.samsung.tuned.lsi_s5kjn1.bin
 vendor/lib64/camera/com.qti.eeprom.sec2qcconversion.so
-vendor/lib64/camera/com.samsung.sensormodule.13_sony_imx355_front_full.bin
 vendor/lib64/camera/f_dual_calibration.bin
-vendor/lib64/camera/ois_mcu_stm32g_fw.bin
 vendor/lib64/camera/t_tof_calibration.bin
 vendor/lib64/camera/uw_dual_calibration.bin
 vendor/lib64/camera/w_dual_calibration.bin
@@ -491,7 +480,6 @@ vendor/lib64/libhypermotion_core.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libvideobeauty_interface.so
 vendor/lib64/libpadm.so
-vendor/lib64/libfocuspeaking_interface.so
 vendor/lib64/libimage_enhancement.arcsoft.so
 vendor/lib64/libvideobeauty.uniplugin@1.0.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -515,7 +503,6 @@ vendor/lib64/libLocalTM_capture_core.camera.samsung.so
 vendor/lib64/libvdis_core.so
 vendor/lib64/unihal_uniplugin@1.0.so
 vendor/lib64/libface_landmark.arcsoft.so
-vendor/lib64/libsuper_night_interface.so
 vendor/lib64/libcamera_nn_stub.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libformatConverter.unifunc.so
@@ -536,7 +523,6 @@ vendor/lib64/libexifa.camera.samsung.so
 vendor/lib64/libcamxfdengine.so
 vendor/lib/libcamximageformatutils.so
 vendor/lib64/libcamximageformatutils.so
-vendor/lib64/libarcsoft_super_night_raw.so
 vendor/lib64/libjpegencoder_sw.unifunc.so
 vendor/lib64/hw/camera.unihal.default.so
 vendor/lib64/hw/camera.qcom.so
