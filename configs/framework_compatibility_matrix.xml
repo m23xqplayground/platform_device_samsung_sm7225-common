@@ -1059,7 +1059,6 @@
        <version>2.2</version>
        <interface>
            <name>ISehRadio</name>
-           <instance>slot1</instance>
            <instance>slot2</instance>
        </interface>
     </hal>
